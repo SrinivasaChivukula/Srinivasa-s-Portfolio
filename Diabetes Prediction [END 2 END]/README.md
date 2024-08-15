@@ -37,15 +37,6 @@ The following points were the objective of the project (The main intention was t
 - Building and hosting a Flask web app on Heroku. 
 - A user has to put details like Number of Pregnancies, Insulin Level, Age, BMI etc . 
 - Once it get all the fields information , the prediction is displyed on a new page . 
-### Technologies Used  
-![](https://forthebadge.com/images/badges/made-with-python.svg) 
-
-[<img target="_blank" src="https://github.com/scikit-learn/scikit-learn/blob/master/doc/logos/scikit-learn-logo-small.png">](https://github.com/scikit-learn/)
-<img target="_blank" src="https://flask.palletsprojects.com/en/1.1.x/_images/flask-logo.png" width=170>
-<img target="_blank" src="https://raw.githubusercontent.com/shsarv/Diabetes-prediction/master/Resource/heroku.png" width=170>
-<img target="_blank" src="https://raw.githubusercontent.com/shsarv/Diabetes-prediction/master/Resource/numpy.png" width=170>
-<img target="_blank" src="https://raw.githubusercontent.com/shsarv/Diabetes-prediction/master/Resource/pandas.jpeg" width=170>
-
 
 ### Installation 
 - Clone this repository and unzip it.
