@@ -14,7 +14,7 @@ I believe code should either make the world smarter or more secure. Ideally, bot
 - **[PyTorch-Sentiment-Embeddings](https://github.com/SrinivasaChivukula/PyTorch-Sentiment-Embeddings):** The great debate—Frozen vs. Learnable embeddings. Check the repo to see who won.
 - **[Sentiment-Analysis-LogReg](https://github.com/SrinivasaChivukula/Sentiment-Analysis-LogReg):** Building Logistic Regression from scratch. Because frameworks are cool, but understanding the math is better.
 - **[NLP-N-Gram-Generator](https://github.com/SrinivasaChivukula/NLP-N-Gram-Generator):** Teaching computers how to talk using statistical probability. It's like autocorrect, but way cooler.
-- **[Diabetes Prediction](./Diabetes%20Prediction%20%5BEND%202%20END%5D/):** A full-blown pipeline for health prediction.
+- **[Predictive-Health-Analytics](https://github.com/SrinivasaChivukula/Predictive-Health-Analytics):** End-to-end predictive modeling for diabetes risk assessment using clinical data and collaborative filtering.
 
 ---
 
