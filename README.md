@@ -47,9 +47,11 @@ I believe code should either make the world smarter or more secure. Ideally, bot
 ---
 
 ### 🛠 Tech Highlights
-- **Frameworks:** PyTorch, TensorFlow, Flask, Scikit-learn, React Native.
-- **Security:** AuthN/AuthZ, Rapid7, Encryption, Networking.
-- **Tools:** Docker, Git/Actions, Anaconda, Jupyter.
+- **Languages:** Python, JavaScript, TypeScript, Java, Kotlin (KMP), SQL, C++.
+- **AI / ML & NLP:** PyTorch, TensorFlow, LLMs (OpenAI/Gemini), Scikit-learn, Pandas, Hugging Face, LangChain, OpenCV.
+- **Full-Stack & Cloud:** React, Next.js, Node.js, Flask, PostgreSQL, MongoDB, AWS, Cloudflare Workers.
+- **Cybersecurity:** AuthN/AuthZ (OIDC, JWKS), Encryption, Rapid7, Threat Modeling, Network Security.
+- **DevOps & Tools:** Docker, Kubernetes, Git/GitHub Actions, CI/CD, Jupyter, Postman.
 
 ---
 "Continuous learning is the only way to stay ahead in this game." 🚀
