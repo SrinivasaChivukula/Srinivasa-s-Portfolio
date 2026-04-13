@@ -15,6 +15,7 @@ I believe code should either make the world smarter or more secure. Ideally, bot
 - **[Sentiment-Analysis-LogReg](https://github.com/SrinivasaChivukula/Sentiment-Analysis-LogReg):** Building Logistic Regression from scratch. Because frameworks are cool, but understanding the math is better.
 - **[NLP-N-Gram-Generator](https://github.com/SrinivasaChivukula/NLP-N-Gram-Generator):** Teaching computers how to talk using statistical probability. It's like autocorrect, but way cooler.
 - **[Predictive-Health-Analytics](https://github.com/SrinivasaChivukula/Predictive-Health-Analytics):** End-to-end predictive modeling for diabetes risk assessment using clinical data and collaborative filtering.
+- **[Loan-Default-Prediction](https://github.com/SrinivasaChivukula/loan-default-prediction):** Predicting financial risk using Histogram Gradient Boosting. Achieved 0.865 AUC and 93.8% accuracy.
 
 ---
 
