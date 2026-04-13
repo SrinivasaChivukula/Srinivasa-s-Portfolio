@@ -42,7 +42,7 @@ I believe code should either make the world smarter or more secure. Ideally, bot
 *Hardware meets software for real-world impact.*
 
 - **[Vital-Sign-Monitor](https://github.com/SrinivasaChivukula/Vital-Sign-Monitor):** **Hackathon Winner!** Real-time biometric monitoring using YOLOv8. 🏥
-- **Vision Assist:** Keeping a watchful eye on our most vulnerable using AI and Raspberry Pi.
+- **[Vision Assist (High-Hat)](https://github.com/richard-w1/High-Hat):** Keeping a watchful eye on our most vulnerable using AI and Raspberry Pi.
 
 ---
 
