@@ -16,6 +16,7 @@ I believe code should either make the world smarter or more secure. Ideally, bot
 - **[NLP-N-Gram-Generator](https://github.com/SrinivasaChivukula/NLP-N-Gram-Generator):** Teaching computers how to talk using statistical probability. It's like autocorrect, but way cooler.
 - **[Predictive-Health-Analytics](https://github.com/SrinivasaChivukula/Predictive-Health-Analytics):** End-to-end predictive modeling for diabetes risk assessment using clinical data and collaborative filtering.
 - **[Loan-Default-Prediction](https://github.com/SrinivasaChivukula/loan-default-prediction):** Predicting financial risk using Histogram Gradient Boosting. Achieved 0.865 AUC and 93.8% accuracy.
+- **[Dreamscape-Composer](https://github.com/SrinivasaChivukula/Dreamscape-Composer):** An interactive AI image generation tool built in Python using `tkinter` and the `google-genai` library, exploring visual and interactive prompt engineering with dynamic environmental options and graceful API fallbacks.
 
 ---
 
@@ -35,6 +36,7 @@ I believe code should either make the world smarter or more secure. Ideally, bot
 - **[Weather-Explorer-MCP](https://github.com/SrinivasaChivukula/Weather-Explorer-MCP):** Using the Model Context Protocol to fetch real-time weather data. Meteorologists, eat your heart out. 🌤️
 - **[Dining-App](https://github.com/SrinivasaChivukula/Dining-App):** Real-time restaurant management. Clean, fast, and feature-rich.
 - **[Dynamic-Web-Essentials](https://github.com/SrinivasaChivukula/Dynamic-Web-Essentials):** A playground for modern UI, Glassmorphism, and everything that makes the web look premium. ✨
+- **[cf_ai_mentor](https://github.com/SrinivasaChivukula/cf_ai_mentor):** An AI-powered mock technical interview coach running entirely on the Cloudflare edge platform using Workers AI (Llama 3.3 70B streaming SSE), Durable Objects for stateful session memory, multi-step Cloudflare Workflows, and voice inputs via Web Speech API.
 
 ---
 
