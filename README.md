@@ -4,6 +4,8 @@ Welcome to my central brain dump! 🧠 This repo is the high-level roadmap to ev
 
 I believe code should either make the world smarter or more secure. Ideally, both. Check out the domain breakdowns below to see what I've been up to.
 
+📄 **[View/Download my Resume (PDF)](https://github.com/SrinivasaChivukula/Srinivasa-s-Portfolio/blob/main/Srinivasa_Chivukula_Resume.pdf)**
+
 ---
 
 ## 🤖 AI / ML & NLP
