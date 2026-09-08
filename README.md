@@ -34,6 +34,7 @@ I believe code should either make the world smarter or more secure. Ideally, bot
 ## ☁️ Cloud & Full-Stack Architecture
 *Building for scale and speed.*
 
+- **[AegisCloud](https://github.com/SrinivasaChivukula/AegisCloud):** Production-grade 2-tier AWS VPC architecture codified in Terraform. Features dynamic Layer 7 ALB auto-scaling, automated cross-region disaster recovery (20m RTO / 5m RPO), multi-cloud CSPM self-healing via AWS Security Hub and Microsoft Defender for Cloud, and the unified `aegis` CLI utility. 🛡️⚡
 - **[Multi-Platform-Service-Architecture](https://github.com/SrinivasaChivukula/Multi-Platform-Service-Architecture):** Advanced patterns for services that need to talk across different platforms seamlessly.
 - **[Weather-Explorer-MCP](https://github.com/SrinivasaChivukula/Weather-Explorer-MCP):** Using the Model Context Protocol to fetch real-time weather data. Meteorologists, eat your heart out. 🌤️
 - **[Dining-App](https://github.com/SrinivasaChivukula/Dining-App):** Real-time restaurant management. Clean, fast, and feature-rich.
