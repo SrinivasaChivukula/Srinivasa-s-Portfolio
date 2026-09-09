@@ -35,6 +35,7 @@ I believe code should either make the world smarter or more secure. Ideally, bot
 *Building for scale and speed.*
 
 - **[AegisCloud](https://github.com/SrinivasaChivukula/AegisCloud):** Production-grade 2-tier AWS VPC architecture codified in Terraform. Features dynamic Layer 7 ALB auto-scaling, automated cross-region disaster recovery (20m RTO / 5m RPO), multi-cloud CSPM self-healing via AWS Security Hub and Microsoft Defender for Cloud, and the unified `aegis` CLI utility. 🛡️⚡
+- **[CommerceStream-Azure](https://github.com/SrinivasaChivukula/CommerceStream-Azure):** Enterprise Azure Retail Analytics Warehouse ingesting Brazilian eCommerce transactions through Bronze (staging), Silver (3NF relational), and Gold (Kimball star schema with SCD Type 2). Features dual ETL pipelines (Azure Data Factory v2 & SSIS 2022), serverless event-driven ingestion via Python Azure Functions, automated Azure SQL Auto-Failover Groups (4.2m RTO / 0.5m RPO), monthly date partitioning with Clustered Columnstore indexing (87.3% query speedup / 78% compression), an active Snowflake CDC mirror, and a full Power BI DAX & SSRS reporting layer. 🏬⚡
 - **[Multi-Platform-Service-Architecture](https://github.com/SrinivasaChivukula/Multi-Platform-Service-Architecture):** Advanced patterns for services that need to talk across different platforms seamlessly.
 - **[Weather-Explorer-MCP](https://github.com/SrinivasaChivukula/Weather-Explorer-MCP):** Using the Model Context Protocol to fetch real-time weather data. Meteorologists, eat your heart out. 🌤️
 - **[Dining-App](https://github.com/SrinivasaChivukula/Dining-App):** Real-time restaurant management. Clean, fast, and feature-rich.
@@ -52,11 +53,12 @@ I believe code should either make the world smarter or more secure. Ideally, bot
 ---
 
 ### 🛠 Tech Highlights
-- **Languages:** Python, JavaScript, TypeScript, Java, Kotlin (KMP), SQL, C++.
+- **Languages:** Python, SQL (T-SQL), JavaScript, TypeScript, Java, Kotlin (KMP), C++, PowerShell.
+- **Data Engineering & BI:** Azure SQL Database, Azure Data Factory (ADF), SSIS, Snowflake, T-SQL (SCD Type 2, Stored Procs, Partitioning, Columnstore), Power BI (DAX), SSRS, Data Modeling (3NF & Kimball Star Schema).
 - **AI / ML & NLP:** PyTorch, TensorFlow, LLMs (OpenAI/Gemini), Scikit-learn, Pandas, Hugging Face, LangChain, OpenCV.
-- **Full-Stack & Cloud:** React, Next.js, Node.js, Flask, PostgreSQL, MongoDB, AWS, Cloudflare Workers.
+- **Full-Stack & Cloud:** React, Next.js, Node.js, Flask, PostgreSQL, MongoDB, AWS, Microsoft Azure, Cloudflare Workers.
 - **Cybersecurity:** AuthN/AuthZ (OIDC, JWKS), Encryption, Rapid7, Threat Modeling, Network Security.
-- **DevOps & Tools:** Docker, Kubernetes, Git/GitHub Actions, CI/CD, Jupyter, Postman.
+- **DevOps & Tools:** Docker, Kubernetes, Terraform, Git/GitHub Actions, CI/CD, Jupyter, Postman.
 
 ---
 "Continuous learning is the only way to stay ahead in this game." 🚀
