@@ -40,7 +40,7 @@ I believe code should either make the world smarter or more secure. Ideally, bot
 - **[Weather-Explorer-MCP](https://github.com/SrinivasaChivukula/Weather-Explorer-MCP):** Using the Model Context Protocol to fetch real-time weather data. Meteorologists, eat your heart out. 🌤️
 - **[Dining-App](https://github.com/SrinivasaChivukula/Dining-App):** Real-time restaurant management. Clean, fast, and feature-rich.
 - **[Dynamic-Web-Essentials](https://github.com/SrinivasaChivukula/Dynamic-Web-Essentials):** A playground for modern UI, Glassmorphism, and everything that makes the web look premium. ✨
-- **[cf_ai_mentor](https://github.com/SrinivasaChivukula/cf_ai_mentor):** An AI-powered mock technical interview coach running entirely on the Cloudflare edge platform using Workers AI (Llama 3.3 70B streaming SSE), Durable Objects for stateful session memory, multi-step Cloudflare Workflows, and voice inputs via Web Speech API.
+- **[cf_ai_mentor](https://github.com/SrinivasaChivukula/cf_ai_mentor):** Production-grade full-stack AI technical interview coach running serverless on Cloudflare's edge platform. Features a modern React 19 + Vite frontend with hands-free Web Speech API dictation and real-time SSE token streaming from Llama 3.3 70B FP8 via Workers AI. Implements a hybrid persistence model pairing Cloudflare Durable Objects (in-memory transactional state) with Cloudflare D1 (SQLite relational storage for session metadata & evaluation analytics), orchestrated by a 4-step autonomous Cloudflare Workflow evaluation pipeline with an automated Vitest test suite and zero-downtime GitHub Actions CI/CD. ⚡🤖
 
 ---
 
@@ -53,12 +53,12 @@ I believe code should either make the world smarter or more secure. Ideally, bot
 ---
 
 ### 🛠 Tech Highlights
-- **Languages:** Python, SQL (T-SQL), JavaScript, TypeScript, Java, Kotlin (KMP), C++, PowerShell.
+- **Languages:** Python, SQL (T-SQL, SQLite), JavaScript, TypeScript, Java, Kotlin (KMP), C++, PowerShell.
 - **Data Engineering & BI:** Azure SQL Database, Azure Data Factory (ADF), SSIS, Snowflake, T-SQL (SCD Type 2, Stored Procs, Partitioning, Columnstore), Power BI (DAX), SSRS, Data Modeling (3NF & Kimball Star Schema).
-- **AI / ML & NLP:** PyTorch, TensorFlow, LLMs (OpenAI/Gemini), Scikit-learn, Pandas, Hugging Face, LangChain, OpenCV.
-- **Full-Stack & Cloud:** React, Next.js, Node.js, Flask, PostgreSQL, MongoDB, AWS, Microsoft Azure, Cloudflare Workers.
+- **AI / ML & NLP:** PyTorch, TensorFlow, LLMs (OpenAI/Gemini/Llama 3.3), Scikit-learn, Pandas, Hugging Face, LangChain, OpenCV.
+- **Full-Stack & Cloud:** React (18/19), Vite, Next.js, Node.js, Flask, PostgreSQL, MongoDB, Cloudflare D1 (SQLite), AWS, Microsoft Azure, Cloudflare Workers, Durable Objects, Workflows.
 - **Cybersecurity:** AuthN/AuthZ (OIDC, JWKS), Encryption, Rapid7, Threat Modeling, Network Security.
-- **DevOps & Tools:** Docker, Kubernetes, Terraform, Git/GitHub Actions, CI/CD, Jupyter, Postman.
+- **DevOps & Tools:** Docker, Kubernetes, Terraform, Git/GitHub Actions, CI/CD, Vitest, Wrangler, Jupyter, Postman.
 
 ---
 "Continuous learning is the only way to stay ahead in this game." 🚀
