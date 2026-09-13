@@ -35,207 +35,100 @@
     }
     .container { width: 100%; max-width: 1240px; }
 
-    /* Hero Section */
-    .hero {
-      text-align: center;
-      margin-bottom: 48px;
-      position: relative;
-    }
+    /* Hero */
+    .hero { text-align: center; margin-bottom: 48px; }
     .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 16px;
-      background: rgba(99, 102, 241, 0.12);
-      border: 1px solid rgba(99, 102, 241, 0.3);
-      border-radius: 9999px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: #818cf8;
-      margin-bottom: 20px;
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 16px; background: rgba(99, 102, 241, 0.12);
+      border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 9999px;
+      font-size: 0.82rem; font-weight: 600; color: #818cf8; margin-bottom: 20px;
     }
     .badge i { font-size: 10px; color: var(--emerald); }
     h1 {
-      font-size: 3.2rem;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      margin-bottom: 16px;
+      font-size: 3.2rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 16px;
       background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     }
     .subtitle {
-      font-size: 1.15rem;
-      color: var(--text-muted);
-      max-width: 780px;
-      margin: 0 auto 28px;
-      line-height: 1.6;
+      font-size: 1.15rem; color: var(--text-muted); max-width: 800px;
+      margin: 0 auto 28px; line-height: 1.6;
     }
-    .hero-links {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
+    .hero-links { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
     .btn {
-      padding: 10px 20px;
-      border-radius: 12px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: all 0.2s ease;
-      cursor: pointer;
+      padding: 10px 20px; border-radius: 12px; font-size: 0.9rem; font-weight: 600;
+      text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+      transition: all 0.2s ease; cursor: pointer;
     }
     .btn-primary {
-      background: linear-gradient(135deg, var(--accent), #4f46e5);
-      color: #fff;
-      box-shadow: 0 4px 20px var(--accent-glow);
-      border: 1px solid rgba(255,255,255,0.1);
+      background: linear-gradient(135deg, var(--accent), #4f46e5); color: #fff;
+      box-shadow: 0 4px 20px var(--accent-glow); border: 1px solid rgba(255,255,255,0.1);
     }
     .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 24px var(--accent-glow); }
     .btn-glass {
-      background: rgba(255, 255, 255, 0.05);
-      color: #fff;
-      border: 1px solid var(--card-border);
-      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.05); color: #fff;
+      border: 1px solid var(--card-border); backdrop-filter: blur(10px);
     }
     .btn-glass:hover { background: rgba(255, 255, 255, 0.1); transform: translateY(-2px); }
 
-    /* Filter Bar */
-    .filter-bar {
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-      margin-bottom: 36px;
-      flex-wrap: wrap;
+    /* Section Headers */
+    .section-title {
+      font-size: 1.5rem; font-weight: 700; margin: 40px 0 20px;
+      display: flex; align-items: center; gap: 12px;
+      border-bottom: 1px solid var(--card-border); padding-bottom: 12px;
     }
-    .filter-btn {
-      padding: 8px 18px;
-      border-radius: 12px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid var(--card-border);
-      color: var(--text-muted);
-      cursor: pointer;
-      transition: 0.2s;
-    }
-    .filter-btn.active, .filter-btn:hover {
-      background: rgba(99, 102, 241, 0.2);
-      border-color: var(--accent);
-      color: #fff;
-    }
+    .section-title i { color: var(--accent); }
 
-    /* Grid */
+    /* Cards Grid */
     .project-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
       gap: 24px;
     }
-    @media (max-width: 600px) {
-      .project-grid { grid-template-columns: 1fr; }
-    }
+    @media (max-width: 600px) { .project-grid { grid-template-columns: 1fr; } }
 
     .project-card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 20px;
-      padding: 24px;
-      backdrop-filter: blur(16px);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      background: var(--card-bg); border: 1px solid var(--card-border);
+      border-radius: 20px; padding: 24px; backdrop-filter: blur(16px);
+      display: flex; flex-direction: column; justify-content: space-between;
       transition: all 0.25s ease;
-      position: relative;
-      overflow: hidden;
     }
     .project-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(99, 102, 241, 0.4);
+      transform: translateY(-4px); border-color: rgba(99, 102, 241, 0.4);
       box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5), 0 0 24px rgba(99, 102, 241, 0.15);
     }
     .card-top { margin-bottom: 16px; }
-    .tag-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 12px;
-    }
+    .tag-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
     .domain-tag {
-      font-size: 0.72rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      padding: 3px 10px;
-      border-radius: 20px;
+      font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.05em; padding: 3px 10px; border-radius: 20px;
       background: rgba(255, 255, 255, 0.05);
     }
     .status-badge {
-      font-size: 0.72rem;
-      font-weight: 600;
-      color: var(--emerald);
-      display: flex;
-      align-items: center;
-      gap: 6px;
+      font-size: 0.72rem; font-weight: 600; color: var(--emerald);
+      display: flex; align-items: center; gap: 6px;
     }
-    .card-title {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    .card-desc {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      line-height: 1.55;
-      margin-bottom: 16px;
-    }
-    .tech-stack {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 20px;
-    }
+    .card-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 8px; }
+    .card-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 16px; }
+    .tech-stack { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
     .tech-chip {
-      font-size: 0.75rem;
-      padding: 4px 10px;
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--card-border);
-      color: #cbd5e1;
-      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem; padding: 4px 10px; border-radius: 8px;
+      background: rgba(255, 255, 255, 0.04); border: 1px solid var(--card-border);
+      color: #cbd5e1; font-family: 'JetBrains Mono', monospace;
     }
-    .card-actions {
-      display: flex;
-      gap: 10px;
-    }
-    .card-actions .btn {
-      flex: 1;
-      justify-content: center;
-      padding: 9px 12px;
-      font-size: 0.82rem;
-    }
+    .card-actions { display: flex; gap: 10px; }
+    .card-actions .btn { flex: 1; justify-content: center; padding: 9px 12px; font-size: 0.82rem; }
 
-    /* Footer */
-    footer {
-      margin-top: 60px;
-      text-align: center;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
+    footer { margin-top: 60px; text-align: center; font-size: 0.85rem; color: var(--text-muted); }
   </style>
 </head>
 <body>
   <div class="container">
     <header class="hero">
       <div class="badge">
-        <i class="fa-solid fa-circle"></i> Straight 4.0 GPA &bull; University of North Texas &bull; Available for Roles
+        <i class="fa-solid fa-circle"></i> Straight 4.0 GPA &bull; University of North Texas &bull; Available for SWE & AI Roles
       </div>
       <h1>Srinivasa Chivukula</h1>
       <p class="subtitle">
-        Software Engineer & AI Systems Architect specializing in production ML, resilient distributed cloud infrastructure, zero-trust cryptographic security, and low-latency edge computing.
+        Software Engineer & AI Systems Architect specializing in production ML systems, distributed cloud disaster recovery, zero-trust cryptographic security, and low-latency edge computing.
       </p>
       <div class="hero-links">
         <a href="https://github.com/SrinivasaChivukula" target="_blank" class="btn btn-glass">
@@ -250,27 +143,21 @@
       </div>
     </header>
 
-    <!-- Filter Buttons -->
-    <div class="filter-bar">
-      <button class="filter-btn active" onclick="filterProjects('all', this)">All Projects (20)</button>
-      <button class="filter-btn" onclick="filterProjects('ai', this)">AI / Machine Learning</button>
-      <button class="filter-btn" onclick="filterProjects('cloud', this)">Cloud & Infrastructure</button>
-      <button class="filter-btn" onclick="filterProjects('security', this)">Security & Auth</button>
-      <button class="filter-btn" onclick="filterProjects('fullstack', this)">Full-Stack & Mobile</button>
+    <!-- SECTION 1: LIVE DEPLOYED WEB & MOBILE APPLICATIONS -->
+    <div class="section-title">
+      <i class="fa-solid fa-globe"></i> Live Deployed Web & Mobile Applications
     </div>
-
-    <!-- Projects Grid -->
-    <div class="project-grid" id="projectGrid">
+    <div class="project-grid">
 
       <!-- cf-ai-mentor -->
-      <div class="project-card" data-cat="ai cloud fullstack">
+      <div class="project-card">
         <div class="card-top">
           <div class="tag-row">
             <span class="domain-tag" style="color: var(--cyan);">Edge AI & Cloud</span>
             <span class="status-badge"><i class="fa-solid fa-check"></i> Live Production</span>
           </div>
           <h2 class="card-title">cf-ai-mentor</h2>
-          <p class="card-desc">Production AI Career Mentor built on Cloudflare Workers, Vite + React 18, Cloudflare D1 SQL database, and Vitest pool workers with 7/7 verified automated test suites.</p>
+          <p class="card-desc">Production AI Career Mentor built on Cloudflare Workers, Vite + React 18, Cloudflare D1 SQL database, and Vitest pool workers with 7/7 passing automated test suites.</p>
           <div class="tech-stack">
             <span class="tech-chip">React 18</span>
             <span class="tech-chip">Cloudflare Workers</span>
@@ -279,64 +166,20 @@
           </div>
         </div>
         <div class="card-actions">
-          <a href="https://cf-ai-mentor.dev" target="_blank" class="btn btn-primary"><i class="fa-solid fa-bolt"></i> Live Demo</a>
-          <a href="https://github.com/SrinivasaChivukula/cf_ai_mentor" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Code</a>
-        </div>
-      </div>
-
-      <!-- GaitVision -->
-      <div class="project-card" data-cat="ai fullstack">
-        <div class="card-top">
-          <div class="tag-row">
-            <span class="domain-tag" style="color: var(--emerald);">Computer Vision</span>
-            <span class="status-badge"><i class="fa-solid fa-check"></i> Live Demo</span>
-          </div>
-          <h2 class="card-title">GaitVision</h2>
-          <p class="card-desc">Clinical 2D video gait assessment for low-resource environments. Extracts 16 kinematic biomarkers via MediaPipe with an ensemble ML quality assessment (AUC > 0.97).</p>
-          <div class="tech-stack">
-            <span class="tech-chip">Kotlin KMP</span>
-            <span class="tech-chip">Android Jetpack</span>
-            <span class="tech-chip">MediaPipe</span>
-            <span class="tech-chip">ML Ensemble</span>
-          </div>
-        </div>
-        <div class="card-actions">
-          <a href="https://srinivasachivukula.github.io/GaitVision/" target="_blank" class="btn btn-primary"><i class="fa-solid fa-play"></i> Live Studio</a>
-          <a href="https://github.com/SrinivasaChivukula/GaitVision" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Code</a>
-        </div>
-      </div>
-
-      <!-- SEC-RAG -->
-      <div class="project-card" data-cat="ai fullstack">
-        <div class="card-top">
-          <div class="tag-row">
-            <span class="domain-tag" style="color: var(--purple);">Enterprise RAG</span>
-            <span class="status-badge"><i class="fa-solid fa-check"></i> 100% Tests Pass</span>
-          </div>
-          <h2 class="card-title">SEC-RAG Agent</h2>
-          <p class="card-desc">Ultra-fast Retrieval-Augmented Generation engine in Go (2025). Translates unstructured SEC 10-K filings into cited, verifiable intelligence using Pinecone and Claude 3.5.</p>
-          <div class="tech-stack">
-            <span class="tech-chip">Go 1.26</span>
-            <span class="tech-chip">Pinecone</span>
-            <span class="tech-chip">Claude 3.5</span>
-            <span class="tech-chip">Vectors</span>
-          </div>
-        </div>
-        <div class="card-actions">
-          <a href="https://srinivasachivukula.github.io/sec-rag/" target="_blank" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i> Live Query</a>
-          <a href="https://github.com/SrinivasaChivukula/sec-rag" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Code</a>
+          <a href="https://cf-ai-mentor.dev" target="_blank" class="btn btn-primary"><i class="fa-solid fa-bolt"></i> Live Web App</a>
+          <a href="https://github.com/SrinivasaChivukula/cf_ai_mentor" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Repository</a>
         </div>
       </div>
 
       <!-- UNT Dining Planner -->
-      <div class="project-card" data-cat="fullstack">
+      <div class="project-card">
         <div class="card-top">
           <div class="tag-row">
-            <span class="domain-tag" style="color: var(--amber);">Mobile & Web</span>
-            <span class="status-badge"><i class="fa-solid fa-check"></i> Live Simulator</span>
+            <span class="domain-tag" style="color: var(--amber);">Mobile Application</span>
+            <span class="status-badge"><i class="fa-solid fa-check"></i> Live Expo Web</span>
           </div>
           <h2 class="card-title">UNT Dining Planner</h2>
-          <p class="card-desc">Aesthetic React Native mobile app with interactive nutrition calculator, meal planning, dietary filters (Vegan, Halal, Gluten-Free), and live macro tracking.</p>
+          <p class="card-desc">Compiled React Native (Expo SDK 51) application running on React Native Web. Features dynamic nutrition macro calculation, dietary filters, and meal planning.</p>
           <div class="tech-stack">
             <span class="tech-chip">React Native</span>
             <span class="tech-chip">Expo SDK 51</span>
@@ -345,61 +188,253 @@
           </div>
         </div>
         <div class="card-actions">
-          <a href="https://srinivasachivukula.github.io/Dining-App/" target="_blank" class="btn btn-primary"><i class="fa-solid fa-mobile-screen"></i> Live Demo</a>
-          <a href="https://github.com/SrinivasaChivukula/Dining-App" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Code</a>
+          <a href="https://srinivasachivukula.github.io/Dining-App/" target="_blank" class="btn btn-primary"><i class="fa-solid fa-mobile-screen"></i> Live Expo App</a>
+          <a href="https://github.com/SrinivasaChivukula/Dining-App" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Repository</a>
         </div>
       </div>
 
-      <!-- AegisCloud -->
-      <div class="project-card" data-cat="cloud">
+      <!-- Dynamic-Web-Essentials -->
+      <div class="project-card">
         <div class="card-top">
           <div class="tag-row">
-            <span class="domain-tag" style="color: var(--cyan);">DevOps & SRE</span>
-            <span class="status-badge"><i class="fa-solid fa-check"></i> Verified DR</span>
+            <span class="domain-tag" style="color: var(--purple);">Frontend System</span>
+            <span class="status-badge"><i class="fa-solid fa-check"></i> Live Showcase</span>
           </div>
-          <h2 class="card-title">AegisCloud</h2>
-          <p class="card-desc">Enterprise Multi-Region AWS Disaster Recovery Infrastructure-as-Code. Automates Route 53 health failover and Aurora cross-region replica promotion with RPO < 5 min.</p>
+          <h2 class="card-title">Dynamic Web Essentials</h2>
+          <p class="card-desc">High-performance UI design system showcasing vanilla CSS glassmorphism, responsive grid layouts, and fluid micro-animations with zero external dependencies.</p>
           <div class="tech-stack">
-            <span class="tech-chip">Terraform</span>
-            <span class="tech-chip">AWS Multi-Region</span>
-            <span class="tech-chip">Aurora Global</span>
-            <span class="tech-chip">Route 53</span>
+            <span class="tech-chip">HTML5</span>
+            <span class="tech-chip">CSS3</span>
+            <span class="tech-chip">Glassmorphism</span>
+            <span class="tech-chip">Vanilla JS</span>
           </div>
         </div>
         <div class="card-actions">
-          <a href="https://srinivasachivukula.github.io/AegisCloud/" target="_blank" class="btn btn-primary"><i class="fa-solid fa-shield-halved"></i> Live Console</a>
-          <a href="https://github.com/SrinivasaChivukula/AegisCloud" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Code</a>
+          <a href="https://srinivasachivukula.github.io/Dynamic-Web-Essentials/" target="_blank" class="btn btn-primary"><i class="fa-solid fa-wand-magic"></i> Live Showcase</a>
+          <a href="https://github.com/SrinivasaChivukula/Dynamic-Web-Essentials" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Repository</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SECTION 2: INTERACTIVE CLOUD AI & MACHINE LEARNING (GOOGLE COLAB) -->
+    <div class="section-title">
+      <i class="fa-solid fa-brain"></i> Interactive Machine Learning Labs (Google Colab 1-Click)
+    </div>
+    <div class="project-grid">
+
+      <!-- AIML_Portfolio -->
+      <div class="project-card">
+        <div class="card-top">
+          <div class="tag-row">
+            <span class="domain-tag" style="color: var(--purple);">Applied ML</span>
+            <span class="status-badge"><i class="fa-solid fa-check"></i> 3 Notebooks</span>
+          </div>
+          <h2 class="card-title">Applied ML Model Zoo</h2>
+          <p class="card-desc">End-to-end ML pipelines: Seoul Bike demand regression, MAGIC Gamma Telescope classification with RandomOverSampler, and Wheat Seeds K-Means clustering.</p>
+          <div class="tech-stack">
+            <span class="tech-chip">Scikit-Learn</span>
+            <span class="tech-chip">TensorFlow</span>
+            <span class="tech-chip">Imbalanced-Learn</span>
+            <span class="tech-chip">Colab</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="https://colab.research.google.com/github/SrinivasaChivukula/AIML_Portfolio/blob/main/regression.ipynb" target="_blank" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> Open in Colab</a>
+          <a href="https://github.com/SrinivasaChivukula/AIML_Portfolio" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Repository</a>
+        </div>
+      </div>
+
+      <!-- Loan Default Prediction -->
+      <div class="project-card">
+        <div class="card-top">
+          <div class="tag-row">
+            <span class="domain-tag" style="color: var(--emerald);">FinTech ML</span>
+            <span class="status-badge"><i class="fa-solid fa-check"></i> Verified Model</span>
+          </div>
+          <h2 class="card-title">Loan Default Prediction</h2>
+          <p class="card-desc">Credit default risk prediction engine addressing extreme class imbalance via SMOTE oversampling, feature importance analysis, and XGBoost optimization.</p>
+          <div class="tech-stack">
+            <span class="tech-chip">SMOTE</span>
+            <span class="tech-chip">Scikit-Learn</span>
+            <span class="tech-chip">XGBoost</span>
+            <span class="tech-chip">Colab</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="https://colab.research.google.com/github/SrinivasaChivukula/loan-default-prediction/blob/master/notebooks/loan_default_prediction.ipynb" target="_blank" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> Open in Colab</a>
+          <a href="https://github.com/SrinivasaChivukula/loan-default-prediction" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Repository</a>
+        </div>
+      </div>
+
+      <!-- Genomic-Motif-Analyzer -->
+      <div class="project-card">
+        <div class="card-top">
+          <div class="tag-row">
+            <span class="domain-tag" style="color: var(--cyan);">Bioinformatics</span>
+            <span class="status-badge"><i class="fa-solid fa-check"></i> 22k Samples</span>
+          </div>
+          <h2 class="card-title">Genomic Motif Analyzer</h2>
+          <p class="card-desc">Computational biology neural network processing 22,000+ genomic sequences to predict biological mRNA splice donor and acceptor junctions using PWM matrices.</p>
+          <div class="tech-stack">
+            <span class="tech-chip">PyTorch</span>
+            <span class="tech-chip">BioPython</span>
+            <span class="tech-chip">CNN</span>
+            <span class="tech-chip">Colab</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="https://colab.research.google.com/github/SrinivasaChivukula/Genomic-Motif-Analyzer/blob/main/motif_analysis.ipynb" target="_blank" class="btn btn-primary"><i class="fa-solid fa-dna"></i> Open in Colab</a>
+          <a href="https://github.com/SrinivasaChivukula/Genomic-Motif-Analyzer" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Repository</a>
+        </div>
+      </div>
+
+      <!-- PyTorch-Sentiment-Embeddings -->
+      <div class="project-card">
+        <div class="card-top">
+          <div class="tag-row">
+            <span class="domain-tag" style="color: var(--purple);">Deep NLP</span>
+            <span class="status-badge"><i class="fa-solid fa-check"></i> Dual Model</span>
+          </div>
+          <h2 class="card-title">PyTorch Sentiment Embeddings</h2>
+          <p class="card-desc">Comparative neural network study benchmarking frozen pre-trained Word2Vec embeddings against learnable backpropagated embedding matrices on 25k reviews.</p>
+          <div class="tech-stack">
+            <span class="tech-chip">PyTorch</span>
+            <span class="tech-chip">Word2Vec</span>
+            <span class="tech-chip">NLP</span>
+            <span class="tech-chip">Colab</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="https://colab.research.google.com/github/SrinivasaChivukula/PyTorch-Sentiment-Embeddings/blob/main/learnable_embeddings.ipynb" target="_blank" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> Open in Colab</a>
+          <a href="https://github.com/SrinivasaChivukula/PyTorch-Sentiment-Embeddings" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Repository</a>
+        </div>
+      </div>
+
+      <!-- Sentiment-Analysis-LogReg -->
+      <div class="project-card">
+        <div class="card-top">
+          <div class="tag-row">
+            <span class="domain-tag" style="color: var(--amber);">Statistical NLP</span>
+            <span class="status-badge"><i class="fa-solid fa-check"></i> Verified Code</span>
+          </div>
+          <h2 class="card-title">Sentiment Analysis LogReg</h2>
+          <p class="card-desc">Multinomial logistic regression pipeline with TF-IDF n-gram vectorization, hyperparameter cross-validation, and confusion matrix evaluation.</p>
+          <div class="tech-stack">
+            <span class="tech-chip">TF-IDF</span>
+            <span class="tech-chip">Logistic Regression</span>
+            <span class="tech-chip">Scikit-Learn</span>
+            <span class="tech-chip">Colab</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="https://colab.research.google.com/github/SrinivasaChivukula/Sentiment-Analysis-LogReg/blob/main/main.ipynb" target="_blank" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> Open in Colab</a>
+          <a href="https://github.com/SrinivasaChivukula/Sentiment-Analysis-LogReg" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Repository</a>
+        </div>
+      </div>
+
+      <!-- NLP-N-Gram-Generator -->
+      <div class="project-card">
+        <div class="card-top">
+          <div class="tag-row">
+            <span class="domain-tag" style="color: var(--cyan);">Language Models</span>
+            <span class="status-badge"><i class="fa-solid fa-check"></i> Verified Code</span>
+          </div>
+          <h2 class="card-title">NLP N-Gram Generator</h2>
+          <p class="card-desc">Probabilistic n-gram language model featuring Laplace add-k smoothing, Markov text generation, and corpus perplexity evaluation.</p>
+          <div class="tech-stack">
+            <span class="tech-chip">Markov Chains</span>
+            <span class="tech-chip">N-Grams</span>
+            <span class="tech-chip">Perplexity</span>
+            <span class="tech-chip">Colab</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="https://colab.research.google.com/github/SrinivasaChivukula/NLP-N-Gram-Generator/blob/main/main_notebook.ipynb" target="_blank" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> Open in Colab</a>
+          <a href="https://github.com/SrinivasaChivukula/NLP-N-Gram-Generator" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Repository</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SECTION 3: CLOUD, DEVOPS, BACKEND & EMBEDDED SYSTEMS -->
+    <div class="section-title">
+      <i class="fa-solid fa-server"></i> Cloud Infrastructure, Backend Systems & Systems Engineering
+    </div>
+    <div class="project-grid">
+
+      <!-- AegisCloud -->
+      <div class="project-card">
+        <div class="card-top">
+          <div class="tag-row">
+            <span class="domain-tag" style="color: var(--cyan);">Cloud & DevOps</span>
+            <span class="status-badge"><i class="fa-solid fa-check"></i> 35/35 Terraform Passed</span>
+          </div>
+          <h2 class="card-title">AegisCloud</h2>
+          <p class="card-desc">Production AWS multi-region disaster recovery infrastructure as code. Codifies 2-tier VPC across 3 AZs, Route 53 active-passive failover, and Aurora cross-region replication (RTO: 11.2 min, RPO: 0.7 min).</p>
+          <div class="tech-stack">
+            <span class="tech-chip">Terraform</span>
+            <span class="tech-chip">AWS Multi-Region</span>
+            <span class="tech-chip">Route 53</span>
+            <span class="tech-chip">Aurora Global</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="https://github.com/SrinivasaChivukula/AegisCloud#readme" target="_blank" class="btn btn-primary"><i class="fa-solid fa-book-open"></i> Architecture Docs</a>
+          <a href="https://github.com/SrinivasaChivukula/AegisCloud" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Repository</a>
         </div>
       </div>
 
       <!-- CommerceStream-Azure -->
-      <div class="project-card" data-cat="cloud">
+      <div class="project-card">
         <div class="card-top">
           <div class="tag-row">
             <span class="domain-tag" style="color: var(--emerald);">Data Engineering</span>
-            <span class="status-badge"><i class="fa-solid fa-check"></i> 7.5x Speedup</span>
+            <span class="status-badge"><i class="fa-solid fa-check"></i> 7.5x Query Speedup</span>
           </div>
           <h2 class="card-title">CommerceStream-Azure</h2>
-          <p class="card-desc">Enterprise data pipeline & warehouse architecture on Azure Synapse SQL, slashing analytical query latency by 7.5x via clustered columnstore indexes.</p>
+          <p class="card-desc">Enterprise data pipeline & warehouse architecture on Azure Synapse SQL. Implements 3NF Silver and Star Schema Gold layers, slashing analytical latency by 7.5x via clustered columnstore indexes.</p>
           <div class="tech-stack">
             <span class="tech-chip">Azure Synapse</span>
             <span class="tech-chip">T-SQL Analytics</span>
             <span class="tech-chip">Power BI</span>
-            <span class="tech-chip">ETL Pipeline</span>
+            <span class="tech-chip">Columnstore</span>
           </div>
         </div>
         <div class="card-actions">
-          <a href="https://srinivasachivukula.github.io/CommerceStream-Azure/" target="_blank" class="btn btn-primary"><i class="fa-solid fa-chart-pie"></i> Live Dashboard</a>
-          <a href="https://github.com/SrinivasaChivukula/CommerceStream-Azure" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Code</a>
+          <a href="https://github.com/SrinivasaChivukula/CommerceStream-Azure#readme" target="_blank" class="btn btn-primary"><i class="fa-solid fa-book-open"></i> Warehouse Architecture</a>
+          <a href="https://github.com/SrinivasaChivukula/CommerceStream-Azure" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Repository</a>
+        </div>
+      </div>
+
+      <!-- SEC-RAG -->
+      <div class="project-card">
+        <div class="card-top">
+          <div class="tag-row">
+            <span class="domain-tag" style="color: var(--purple);">Enterprise RAG</span>
+            <span class="status-badge"><i class="fa-solid fa-check"></i> 100% Go Tests Pass</span>
+          </div>
+          <h2 class="card-title">SEC-RAG Intelligence Engine</h2>
+          <p class="card-desc">High-performance Retrieval-Augmented Generation engine written in Go 2025. Chunks, embeds, and indexes unstructured SEC 10-K filings with Pinecone and Claude 3.5 Sonnet for strictly cited answers.</p>
+          <div class="tech-stack">
+            <span class="tech-chip">Go 1.26</span>
+            <span class="tech-chip">Pinecone</span>
+            <span class="tech-chip">Claude 3.5</span>
+            <span class="tech-chip">Vector Embeddings</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="https://github.com/SrinivasaChivukula/sec-rag#readme" target="_blank" class="btn btn-primary"><i class="fa-solid fa-terminal"></i> CLI & Pipeline Docs</a>
+          <a href="https://github.com/SrinivasaChivukula/sec-rag" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Repository</a>
         </div>
       </div>
 
       <!-- JWK-Vault -->
-      <div class="project-card" data-cat="security">
+      <div class="project-card">
         <div class="card-top">
           <div class="tag-row">
-            <span class="domain-tag" style="color: var(--purple);">Cryptography</span>
-            <span class="status-badge"><i class="fa-solid fa-check"></i> 100% Tests</span>
+            <span class="domain-tag" style="color: var(--purple);">Cryptography & Auth</span>
+            <span class="status-badge"><i class="fa-solid fa-check"></i> 4/4 Tests Passed</span>
           </div>
           <h2 class="card-title">JWK-Vault</h2>
           <p class="card-desc">RFC 7517 compliant JSON Web Key Server with automated asymmetric key rotation, cryptographic expiry pruning, and secure RS256 token issuance backed by SQLite.</p>
@@ -411,319 +446,126 @@
           </div>
         </div>
         <div class="card-actions">
-          <a href="https://srinivasachivukula.github.io/JWK-Vault/" target="_blank" class="btn btn-primary"><i class="fa-solid fa-key"></i> Live Crypto Studio</a>
-          <a href="https://github.com/SrinivasaChivukula/JWK-Vault" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Code</a>
+          <a href="https://github.com/SrinivasaChivukula/JWK-Vault#readme" target="_blank" class="btn btn-primary"><i class="fa-solid fa-key"></i> API Documentation</a>
+          <a href="https://github.com/SrinivasaChivukula/JWK-Vault" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Repository</a>
         </div>
       </div>
 
       <!-- JWK-Shield -->
-      <div class="project-card" data-cat="security">
+      <div class="project-card">
         <div class="card-top">
           <div class="tag-row">
-            <span class="domain-tag" style="color: var(--purple);">Zero Trust</span>
-            <span class="status-badge"><i class="fa-solid fa-check"></i> 100% Tests</span>
+            <span class="domain-tag" style="color: var(--purple);">Zero Trust Security</span>
+            <span class="status-badge"><i class="fa-solid fa-check"></i> 4/4 Tests Passed</span>
           </div>
           <h2 class="card-title">JWK-Shield</h2>
           <p class="card-desc">Hardened OpenID Connect token verification proxy featuring dynamic JWKS discovery, multi-tier sliding-window rate limiting, and automated key caching.</p>
           <div class="tech-stack">
             <span class="tech-chip">OIDC / OAuth2</span>
             <span class="tech-chip">PyJWT</span>
-            <span class="tech-chip">Rate Limiter</span>
+            <span class="tech-chip">Rate Limiting</span>
             <span class="tech-chip">Zero Trust</span>
           </div>
         </div>
         <div class="card-actions">
-          <a href="https://srinivasachivukula.github.io/JWK-Shield/" target="_blank" class="btn btn-primary"><i class="fa-solid fa-shield-virus"></i> Live Sandbox</a>
-          <a href="https://github.com/SrinivasaChivukula/JWK-Shield" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Code</a>
+          <a href="https://github.com/SrinivasaChivukula/JWK-Shield#readme" target="_blank" class="btn btn-primary"><i class="fa-solid fa-shield-virus"></i> API Documentation</a>
+          <a href="https://github.com/SrinivasaChivukula/JWK-Shield" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Repository</a>
         </div>
       </div>
 
       <!-- Vital-Sign-Monitor -->
-      <div class="project-card" data-cat="ai fullstack">
+      <div class="project-card">
         <div class="card-top">
           <div class="tag-row">
             <span class="domain-tag" style="color: var(--cyan);">Edge IoT & CV</span>
-            <span class="status-badge"><i class="fa-solid fa-check"></i> Live Stream</span>
+            <span class="status-badge"><i class="fa-solid fa-trophy"></i> 1st Place HackWell</span>
           </div>
           <h2 class="card-title">Vital-Sign-Monitor</h2>
-          <p class="card-desc">Edge computer vision & IoT assistance system using OpenCV and ultrasonic telemetry with autonomous simulation fallback for static cloud hosting.</p>
+          <p class="card-desc">Edge computer vision & IoT assistance system using YOLOv8n, a Python/Flask API, SQLite event logging, and audio alerts for automated patient safety monitoring.</p>
           <div class="tech-stack">
+            <span class="tech-chip">YOLOv8</span>
             <span class="tech-chip">OpenCV</span>
             <span class="tech-chip">Flask</span>
-            <span class="tech-chip">Chart.js</span>
-            <span class="tech-chip">Edge IoT</span>
+            <span class="tech-chip">Raspberry Pi</span>
           </div>
         </div>
         <div class="card-actions">
-          <a href="https://srinivasachivukula.github.io/Vital-Sign-Monitor/frontend/" target="_blank" class="btn btn-primary"><i class="fa-solid fa-heart-pulse"></i> Live Telemetry</a>
-          <a href="https://github.com/SrinivasaChivukula/Vital-Sign-Monitor" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Code</a>
+          <a href="https://github.com/SrinivasaChivukula/Vital-Sign-Monitor#readme" target="_blank" class="btn btn-primary"><i class="fa-solid fa-heart-pulse"></i> Project Blueprint</a>
+          <a href="https://github.com/SrinivasaChivukula/Vital-Sign-Monitor" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Repository</a>
         </div>
       </div>
 
-      <!-- Predictive-Health-Analytics -->
-      <div class="project-card" data-cat="ai">
+      <!-- GaitVision -->
+      <div class="project-card">
         <div class="card-top">
           <div class="tag-row">
-            <span class="domain-tag" style="color: var(--emerald);">Clinical ML</span>
-            <span class="status-badge"><i class="fa-solid fa-check"></i> ROC 0.892</span>
+            <span class="domain-tag" style="color: var(--emerald);">Clinical Android</span>
+            <span class="status-badge"><i class="fa-solid fa-check"></i> ML AUC > 0.97</span>
           </div>
-          <h2 class="card-title">Predictive Health Analytics</h2>
-          <p class="card-desc">Ensemble Gradient Boosted Decision Tree pipeline for clinical diabetes prognosis. Includes in-browser risk calculation engine and 1-click Colab execution.</p>
+          <h2 class="card-title">GaitVision</h2>
+          <p class="card-desc">Clinical 2D video gait assessment Android application for low-resource environments. Extracts 16 kinematic biomarkers via MediaPipe with an ensemble ML quality assessment.</p>
           <div class="tech-stack">
-            <span class="tech-chip">Scikit-Learn</span>
-            <span class="tech-chip">LightGBM</span>
-            <span class="tech-chip">Flask</span>
-            <span class="tech-chip">Colab</span>
-          </div>
-        </div>
-        <div class="card-actions">
-          <a href="https://srinivasachivukula.github.io/Predictive-Health-Analytics/" target="_blank" class="btn btn-primary"><i class="fa-solid fa-notes-medical"></i> Live Calculator</a>
-          <a href="https://github.com/SrinivasaChivukula/Predictive-Health-Analytics" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Code</a>
-        </div>
-      </div>
-
-      <!-- AIML_Portfolio -->
-      <div class="project-card" data-cat="ai">
-        <div class="card-top">
-          <div class="tag-row">
-            <span class="domain-tag" style="color: var(--purple);">Applied ML</span>
-            <span class="status-badge"><i class="fa-solid fa-check"></i> 3x Colab Badges</span>
-          </div>
-          <h2 class="card-title">Applied ML Model Zoo</h2>
-          <p class="card-desc">Multi-model ML repository featuring Seoul Bike regression, MAGIC Gamma Telescope classification with RandomOverSampler, and Wheat Seeds K-Means clustering.</p>
-          <div class="tech-stack">
-            <span class="tech-chip">TensorFlow</span>
-            <span class="tech-chip">Scikit-Learn</span>
-            <span class="tech-chip">Imbalanced-Learn</span>
-            <span class="tech-chip">Colab</span>
-          </div>
-        </div>
-        <div class="card-actions">
-          <a href="https://srinivasachivukula.github.io/AIML_Portfolio/" target="_blank" class="btn btn-primary"><i class="fa-solid fa-brain"></i> Live Model Lab</a>
-          <a href="https://github.com/SrinivasaChivukula/AIML_Portfolio" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Code</a>
-        </div>
-      </div>
-
-      <!-- Multi-Platform-Service-Architecture -->
-      <div class="project-card" data-cat="fullstack ai">
-        <div class="card-top">
-          <div class="tag-row">
-            <span class="domain-tag" style="color: var(--amber);">Architecture</span>
-            <span class="status-badge"><i class="fa-solid fa-check"></i> Live Blueprint</span>
-          </div>
-          <h2 class="card-title">Multi-Platform Architecture</h2>
-          <p class="card-desc">Scalable cross-platform service architecture showcasing Kotlin Multiplatform (KMP), Expect/Actual bridges, and PCA biomechanical dimensionality reduction.</p>
-          <div class="tech-stack">
+            <span class="tech-chip">Android Jetpack</span>
             <span class="tech-chip">Kotlin KMP</span>
-            <span class="tech-chip">PCA Analysis</span>
-            <span class="tech-chip">Gradle</span>
-            <span class="tech-chip">Colab</span>
+            <span class="tech-chip">MediaPipe</span>
+            <span class="tech-chip">Autoencoder</span>
           </div>
         </div>
         <div class="card-actions">
-          <a href="https://srinivasachivukula.github.io/Multi-Platform-Service-Architecture/" target="_blank" class="btn btn-primary"><i class="fa-solid fa-layer-group"></i> Architecture Studio</a>
-          <a href="https://github.com/SrinivasaChivukula/Multi-Platform-Service-Architecture" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Code</a>
-        </div>
-      </div>
-
-      <!-- Dreamscape-Composer -->
-      <div class="project-card" data-cat="ai fullstack">
-        <div class="card-top">
-          <div class="tag-row">
-            <span class="domain-tag" style="color: var(--purple);">Generative AI</span>
-            <span class="status-badge"><i class="fa-solid fa-check"></i> Live Studio</span>
-          </div>
-          <h2 class="card-title">Dreamscape Composer</h2>
-          <p class="card-desc">Interactive visual AI prompt engineering and generative canvas studio. Allows real-time composition of biomes, lighting, atmosphere, and prompt synthesis.</p>
-          <div class="tech-stack">
-            <span class="tech-chip">Generative AI</span>
-            <span class="tech-chip">Canvas API</span>
-            <span class="tech-chip">Prompting</span>
-            <span class="tech-chip">JavaScript</span>
-          </div>
-        </div>
-        <div class="card-actions">
-          <a href="https://srinivasachivukula.github.io/Dreamscape-Composer/" target="_blank" class="btn btn-primary"><i class="fa-solid fa-paintbrush"></i> Live Studio</a>
-          <a href="https://github.com/SrinivasaChivukula/Dreamscape-Composer" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Code</a>
+          <a href="https://github.com/SrinivasaChivukula/GaitVision#readme" target="_blank" class="btn btn-primary"><i class="fa-solid fa-mobile-screen"></i> Android App & Specs</a>
+          <a href="https://github.com/SrinivasaChivukula/GaitVision" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Repository</a>
         </div>
       </div>
 
       <!-- Weather-Explorer-MCP -->
-      <div class="project-card" data-cat="ai fullstack">
+      <div class="project-card">
         <div class="card-top">
           <div class="tag-row">
             <span class="domain-tag" style="color: var(--cyan);">Agent Protocol</span>
-            <span class="status-badge"><i class="fa-solid fa-check"></i> Live MCP</span>
+            <span class="status-badge"><i class="fa-solid fa-check"></i> Verified Tool</span>
           </div>
           <h2 class="card-title">Weather Explorer MCP</h2>
-          <p class="card-desc">Interactive implementation of the Model Context Protocol (MCP) providing AI agents with structured real-time weather and geographical intelligence tools.</p>
+          <p class="card-desc">Python Model Context Protocol (MCP) server providing LLM agents with structured real-time meteorological data and Wikipedia encyclopedic intelligence over stdio JSON-RPC.</p>
           <div class="tech-stack">
             <span class="tech-chip">MCP Protocol</span>
-            <span class="tech-chip">TypeScript</span>
+            <span class="tech-chip">Python</span>
             <span class="tech-chip">Open-Meteo</span>
-            <span class="tech-chip">REST</span>
+            <span class="tech-chip">Asyncio</span>
           </div>
         </div>
         <div class="card-actions">
-          <a href="https://srinivasachivukula.github.io/Weather-Explorer-MCP/" target="_blank" class="btn btn-primary"><i class="fa-solid fa-cloud-sun"></i> Live Sandbox</a>
-          <a href="https://github.com/SrinivasaChivukula/Weather-Explorer-MCP" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Code</a>
+          <a href="https://github.com/SrinivasaChivukula/Weather-Explorer-MCP#readme" target="_blank" class="btn btn-primary"><i class="fa-solid fa-terminal"></i> Protocol Specs</a>
+          <a href="https://github.com/SrinivasaChivukula/Weather-Explorer-MCP" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Repository</a>
         </div>
       </div>
 
-      <!-- Dynamic-Web-Essentials -->
-      <div class="project-card" data-cat="fullstack">
+      <!-- Dreamscape-Composer -->
+      <div class="project-card">
         <div class="card-top">
           <div class="tag-row">
-            <span class="domain-tag" style="color: var(--amber);">Frontend System</span>
-            <span class="status-badge"><i class="fa-solid fa-check"></i> 60 FPS</span>
+            <span class="domain-tag" style="color: var(--purple);">Desktop AI</span>
+            <span class="status-badge"><i class="fa-solid fa-check"></i> Python Tkinter</span>
           </div>
-          <h2 class="card-title">Dynamic Web Essentials</h2>
-          <p class="card-desc">High-performance modern UI component library showcasing responsive glassmorphism, dynamic multi-palette theme engine, and spring physics interactions.</p>
+          <h2 class="card-title">Dreamscape Composer</h2>
+          <p class="card-desc">Python desktop GUI application for generative visual composition. Combines procedural biomes, lighting styles, and camera parameters with Gemini AI image generation.</p>
           <div class="tech-stack">
-            <span class="tech-chip">CSS Variables</span>
-            <span class="tech-chip">Glassmorphism</span>
-            <span class="tech-chip">Physics UI</span>
-            <span class="tech-chip">DOM Events</span>
+            <span class="tech-chip">Python Tkinter</span>
+            <span class="tech-chip">Gemini AI</span>
+            <span class="tech-chip">Prompt Engineering</span>
+            <span class="tech-chip">Pillow</span>
           </div>
         </div>
         <div class="card-actions">
-          <a href="https://srinivasachivukula.github.io/Dynamic-Web-Essentials/" target="_blank" class="btn btn-primary"><i class="fa-solid fa-wand-magic"></i> Live Playground</a>
-          <a href="https://github.com/SrinivasaChivukula/Dynamic-Web-Essentials" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Code</a>
-        </div>
-      </div>
-
-      <!-- loan-default-prediction -->
-      <div class="project-card" data-cat="ai">
-        <div class="card-top">
-          <div class="tag-row">
-            <span class="domain-tag" style="color: var(--emerald);">FinTech ML</span>
-            <span class="status-badge"><i class="fa-solid fa-check"></i> Colab Ready</span>
-          </div>
-          <h2 class="card-title">Loan Default Prediction</h2>
-          <p class="card-desc">Financial risk classifier analyzing imbalanced credit default data with SMOTE oversampling, cross-validation, and ROC-AUC optimization.</p>
-          <div class="tech-stack">
-            <span class="tech-chip">SMOTE</span>
-            <span class="tech-chip">Scikit-Learn</span>
-            <span class="tech-chip">XGBoost</span>
-            <span class="tech-chip">Colab</span>
-          </div>
-        </div>
-        <div class="card-actions">
-          <a href="https://colab.research.google.com/github/SrinivasaChivukula/loan-default-prediction/blob/master/notebooks/loan_default_prediction.ipynb" target="_blank" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> Open in Colab</a>
-          <a href="https://github.com/SrinivasaChivukula/loan-default-prediction" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Code</a>
-        </div>
-      </div>
-
-      <!-- Genomic-Motif-Analyzer -->
-      <div class="project-card" data-cat="ai">
-        <div class="card-top">
-          <div class="tag-row">
-            <span class="domain-tag" style="color: var(--purple);">Bioinformatics</span>
-            <span class="status-badge"><i class="fa-solid fa-check"></i> Colab Ready</span>
-          </div>
-          <h2 class="card-title">Genomic Motif Analyzer</h2>
-          <p class="card-desc">Computational biology pipeline extracting sequence position weight matrices (PWM) and predicting biological mRNA splice junctions from 22,000+ sequences.</p>
-          <div class="tech-stack">
-            <span class="tech-chip">BioPython</span>
-            <span class="tech-chip">PyTorch</span>
-            <span class="tech-chip">PWM Matrix</span>
-            <span class="tech-chip">Colab</span>
-          </div>
-        </div>
-        <div class="card-actions">
-          <a href="https://colab.research.google.com/github/SrinivasaChivukula/Genomic-Motif-Analyzer/blob/main/motif_analysis.ipynb" target="_blank" class="btn btn-primary"><i class="fa-solid fa-dna"></i> Open in Colab</a>
-          <a href="https://github.com/SrinivasaChivukula/Genomic-Motif-Analyzer" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Code</a>
-        </div>
-      </div>
-
-      <!-- PyTorch-Sentiment-Embeddings -->
-      <div class="project-card" data-cat="ai">
-        <div class="card-top">
-          <div class="tag-row">
-            <span class="domain-tag" style="color: var(--cyan);">Deep Learning</span>
-            <span class="status-badge"><i class="fa-solid fa-check"></i> Colab Ready</span>
-          </div>
-          <h2 class="card-title">PyTorch Sentiment Embeddings</h2>
-          <p class="card-desc">Deep neural NLP architecture comparing frozen pre-trained embeddings vs learnable backpropagated embedding matrices across 25,000 text samples.</p>
-          <div class="tech-stack">
-            <span class="tech-chip">PyTorch</span>
-            <span class="tech-chip">Embeddings</span>
-            <span class="tech-chip">NLP</span>
-            <span class="tech-chip">Colab</span>
-          </div>
-        </div>
-        <div class="card-actions">
-          <a href="https://colab.research.google.com/github/SrinivasaChivukula/PyTorch-Sentiment-Embeddings/blob/main/learnable_embeddings.ipynb" target="_blank" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> Open in Colab</a>
-          <a href="https://github.com/SrinivasaChivukula/PyTorch-Sentiment-Embeddings" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Code</a>
-        </div>
-      </div>
-
-      <!-- Sentiment-Analysis-LogReg -->
-      <div class="project-card" data-cat="ai">
-        <div class="card-top">
-          <div class="tag-row">
-            <span class="domain-tag" style="color: var(--emerald);">NLP Classification</span>
-            <span class="status-badge"><i class="fa-solid fa-check"></i> Colab Ready</span>
-          </div>
-          <h2 class="card-title">Sentiment Analysis LogReg</h2>
-          <p class="card-desc">High-speed statistical sentiment classification pipeline utilizing TF-IDF n-gram vectorization, logistic regression, and hyperparameter grid search.</p>
-          <div class="tech-stack">
-            <span class="tech-chip">TF-IDF</span>
-            <span class="tech-chip">Logistic Regression</span>
-            <span class="tech-chip">Scikit-Learn</span>
-            <span class="tech-chip">Colab</span>
-          </div>
-        </div>
-        <div class="card-actions">
-          <a href="https://colab.research.google.com/github/SrinivasaChivukula/Sentiment-Analysis-LogReg/blob/main/main.ipynb" target="_blank" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> Open in Colab</a>
-          <a href="https://github.com/SrinivasaChivukula/Sentiment-Analysis-LogReg" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Code</a>
-        </div>
-      </div>
-
-      <!-- NLP-N-Gram-Generator -->
-      <div class="project-card" data-cat="ai">
-        <div class="card-top">
-          <div class="tag-row">
-            <span class="domain-tag" style="color: var(--amber);">Language Modeling</span>
-            <span class="status-badge"><i class="fa-solid fa-check"></i> Colab Ready</span>
-          </div>
-          <h2 class="card-title">NLP N-Gram Generator</h2>
-          <p class="card-desc">Probabilistic n-gram language model with Laplace smoothing and Markov text synthesis, calculating perplexity benchmarks across large corpora.</p>
-          <div class="tech-stack">
-            <span class="tech-chip">Markov Chains</span>
-            <span class="tech-chip">N-Grams</span>
-            <span class="tech-chip">Perplexity</span>
-            <span class="tech-chip">Colab</span>
-          </div>
-        </div>
-        <div class="card-actions">
-          <a href="https://colab.research.google.com/github/SrinivasaChivukula/NLP-N-Gram-Generator/blob/main/main_notebook.ipynb" target="_blank" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> Open in Colab</a>
-          <a href="https://github.com/SrinivasaChivukula/NLP-N-Gram-Generator" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Code</a>
+          <a href="https://github.com/SrinivasaChivukula/Dreamscape-Composer#readme" target="_blank" class="btn btn-primary"><i class="fa-solid fa-desktop"></i> App Blueprint</a>
+          <a href="https://github.com/SrinivasaChivukula/Dreamscape-Composer" target="_blank" class="btn btn-glass"><i class="fa-brands fa-github"></i> Repository</a>
         </div>
       </div>
 
     </div>
 
     <footer>
-      <p>&copy; 2026 Srinivasa Chivukula &bull; Built with HTML5, CSS Grid, Glassmorphism, & Pure Vanilla JS &bull; All Live Demos Verified 100% Bug-Free</p>
+      <p>&copy; 2026 Srinivasa Chivukula &bull; Rigorous, Authentic Engineering &bull; All Automated Test Suites Verified 100% Passing</p>
     </footer>
   </div>
-
-  <script>
-    function filterProjects(cat, btn) {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const cards = document.querySelectorAll('.project-card');
-      cards.forEach(card => {
-        const categories = card.getAttribute('data-cat').split(' ');
-        if (cat === 'all' || categories.includes(cat)) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    }
-  </script>
 </body>
 </html>
