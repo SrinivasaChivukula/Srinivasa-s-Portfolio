@@ -3,1073 +3,1550 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Srinivasa Chivukula | Software Engineer & AI Systems Architect</title>
-  <meta name="description" content="Portfolio of Srinivasa Chivukula, Software Engineer & AI Systems Architect. Straight 4.0 GPA at UNT, specializing in distributed systems, machine learning, and cloud security." />
+  <title>Srinivasa Chivukula — Software Engineer & AI Systems Researcher</title>
+  <meta name="description" content="Portfolio of Srinivasa Chivukula, Software Engineer and AI Systems Researcher at the University of North Texas (4.0 GPA). Specializing in genomic deep learning, cloud security, and distributed systems." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
   <style>
     :root {
-      --bg: #0b0f19;
-      --bg-card: rgba(18, 26, 43, 0.65);
-      --border: rgba(255, 255, 255, 0.07);
-      --border-hover: rgba(56, 189, 248, 0.3);
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --text-sub: #64748b;
-      --accent: #38bdf8;
-      --accent-indigo: #818cf8;
-      --accent-emerald: #34d399;
-      --accent-amber: #fbbf24;
-      --accent-rose: #fb7185;
+      --bg: #0c0d10;
+      --bg-surface: #141519;
+      --bg-elevated: #1a1c22;
+      --border: rgba(255, 255, 255, 0.08);
+      --border-hover: rgba(255, 255, 255, 0.2);
+      --text-primary: #ffffff;
+      --text-secondary: #9ca3af;
+      --text-muted: #6b7280;
+      --accent: #3b82f6;
+      --accent-soft: rgba(59, 130, 246, 0.12);
+      --accent-emerald: #10b981;
+      --accent-emerald-soft: rgba(16, 185, 129, 0.12);
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-serif: 'Newsreader', Georgia, serif;
+      --font-mono: 'JetBrains Mono', monospace;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-family: var(--font-sans);
       background-color: var(--bg);
-      color: var(--text-main);
-      line-height: 1.6;
+      color: var(--text-primary);
+      line-height: 1.65;
       min-height: 100vh;
       overflow-x: hidden;
-      position: relative;
+      -webkit-font-smoothing: antialiased;
     }
 
-    /* Ambient cursor spotlight */
-    #spotlight {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100vw; height: 100vh;
-      pointer-events: none;
-      z-index: 999;
-      background: radial-gradient(600px circle at var(--mouse-x, 50vw) var(--mouse-y, 50vh), rgba(56, 189, 248, 0.06), transparent 80%);
-      transition: opacity 0.3s ease;
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease, opacity 0.2s ease;
     }
 
-    /* Main Container */
-    .layout-container {
-      max-width: 1280px;
+    /* Container */
+    .container {
+      max-width: 960px;
       margin: 0 auto;
-      padding: 0 40px;
-      display: flex;
-      justify-content: space-between;
-      gap: 60px;
-      min-height: 100vh;
+      padding: 0 32px;
     }
 
-    /* Pinned Left Sidebar */
-    .sidebar {
-      width: 44%;
+    /* Minimalist Editorial Header */
+    header.site-header {
       position: sticky;
       top: 0;
-      height: 100vh;
+      z-index: 100;
+      background: rgba(12, 13, 16, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      transition: border-color 0.2s ease;
+    }
+
+    .header-inner {
       display: flex;
-      flex-direction: column;
       justify-content: space-between;
-      padding: 80px 0;
-    }
-
-    .hero-name {
-      font-size: 3rem;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      line-height: 1.1;
-      margin-bottom: 12px;
-      background: linear-gradient(135deg, #ffffff 40%, #94a3b8 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .hero-title {
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: var(--accent);
-      margin-bottom: 16px;
-      letter-spacing: -0.01em;
-    }
-
-    .hero-tagline {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      line-height: 1.65;
-      max-width: 380px;
-      margin-bottom: 24px;
-    }
-
-    .hero-metrics-pill {
-      display: inline-flex;
       align-items: center;
-      gap: 10px;
-      padding: 6px 14px;
-      background: rgba(56, 189, 248, 0.08);
-      border: 1px solid rgba(56, 189, 248, 0.25);
-      border-radius: 9999px;
-      font-size: 0.78rem;
-      font-family: 'JetBrains Mono', monospace;
-      color: #7dd3fc;
-      margin-bottom: 36px;
-    }
-    .hero-metrics-pill span.dot {
-      width: 8px; height: 8px;
-      background: var(--accent-emerald);
-      border-radius: 50%;
-      box-shadow: 0 0 8px var(--accent-emerald);
+      padding: 20px 0;
     }
 
-    /* In-Page Navigation */
-    .nav-menu {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      list-style: none;
-    }
-
-    .nav-link {
+    .brand {
       display: flex;
       align-items: center;
-      gap: 16px;
-      text-decoration: none;
-      font-size: 0.82rem;
+      gap: 12px;
       font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-sub);
-      transition: all 0.25s ease;
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
     }
 
-    .nav-indicator {
-      width: 32px;
-      height: 1px;
-      background: var(--text-sub);
-      transition: all 0.25s ease;
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-emerald);
+      box-shadow: 0 0 10px var(--accent-emerald);
+      display: inline-block;
     }
 
-    .nav-link:hover, .nav-link.active {
-      color: var(--text-main);
+    .status-pill {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      background: rgba(255, 255, 255, 0.05);
+      padding: 3px 10px;
+      border-radius: 9999px;
+      border: 1px solid var(--border);
     }
 
-    .nav-link:hover .nav-indicator, .nav-link.active .nav-indicator {
-      width: 64px;
-      background: var(--accent);
-    }
-
-    /* Socials & Resume in Footer */
-    .sidebar-footer {
+    .nav-links {
       display: flex;
+      gap: 24px;
       align-items: center;
-      gap: 20px;
     }
 
-    .social-btn {
-      color: var(--text-muted);
-      font-size: 1.35rem;
-      transition: all 0.2s;
-      text-decoration: none;
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-secondary);
     }
-    .social-btn:hover {
-      color: var(--accent);
-      transform: translateY(-2px);
+    .nav-links a:hover {
+      color: var(--text-primary);
     }
 
-    .resume-badge-btn {
+    .btn-header-resume {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 8px 18px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid var(--border);
-      border-radius: 10px;
+      gap: 6px;
       font-size: 0.82rem;
       font-weight: 600;
-      color: #fff;
-      text-decoration: none;
-      transition: all 0.2s;
+      padding: 6px 14px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border);
+      color: var(--text-primary);
+      transition: all 0.2s ease;
     }
-    .resume-badge-btn:hover {
-      background: rgba(56, 189, 248, 0.15);
-      border-color: var(--accent);
-      color: var(--accent);
+    .btn-header-resume:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: var(--border-hover);
       transform: translateY(-1px);
     }
 
-    /* Right Scrollable Content Stream */
-    .content-stream {
-      width: 54%;
-      padding: 80px 0;
-      display: flex;
-      flex-direction: column;
-      gap: 100px;
+    /* Hero Section (Julian Ozen Inspired) */
+    section.hero {
+      padding: 90px 0 70px;
     }
 
-    /* Section Typography */
-    .section-heading {
-      display: none; /* Desktop uses left nav, visible on mobile */
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent-emerald);
+      background: var(--accent-emerald-soft);
+      padding: 6px 14px;
+      border-radius: 9999px;
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      margin-bottom: 28px;
     }
 
-    .lead-text {
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      line-height: 1.75;
-      margin-bottom: 20px;
+    h1.hero-heading {
+      font-size: 3.8rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.08;
+      margin-bottom: 24px;
+      color: var(--text-primary);
     }
-    .lead-text b, .lead-text strong {
-      color: var(--text-main);
+
+    p.hero-body {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      max-width: 740px;
+      margin-bottom: 36px;
+    }
+    p.hero-body strong {
+      color: var(--text-primary);
       font-weight: 600;
     }
-    .lead-text a {
-      color: var(--accent);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(56, 189, 248, 0.3);
-      transition: border-color 0.2s;
-    }
-    .lead-text a:hover {
-      border-color: var(--accent);
-    }
 
-    /* Interactive Experience / Project Cards */
-    .card-list {
+    .hero-actions {
       display: flex;
-      flex-direction: column;
-      gap: 24px;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 50px;
     }
 
-    .story-card {
-      position: relative;
-      background: transparent;
-      border: 1px solid transparent;
-      border-radius: 16px;
-      padding: 24px;
-      transition: all 0.25s ease;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
+    /* Julian Ozen Style Metallic / Pill Buttons */
+    .pill-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border-radius: 9999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
     }
 
-    .story-card:hover {
-      background: var(--bg-card);
+    .pill-primary {
+      background: #ffffff;
+      color: #0c0d10;
+      border: 1px solid #ffffff;
+      box-shadow: 0 4px 14px rgba(255, 255, 255, 0.15);
+    }
+    .pill-primary:hover {
+      background: #e5e7eb;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25);
+    }
+
+    .pill-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-primary);
+      border: 1px solid var(--border);
+    }
+    .pill-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
       border-color: var(--border-hover);
-      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(56, 189, 248, 0.08);
       transform: translateY(-2px);
     }
 
-    .card-header-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 12px;
+    /* Impact Strip */
+    .impact-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 28px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
 
-    .card-title-link {
-      font-size: 1.15rem;
+    .impact-item {
+      display: flex;
+      flex-direction: column;
+    }
+    .impact-value {
+      font-family: var(--font-mono);
+      font-size: 1.8rem;
       font-weight: 700;
-      color: var(--text-main);
-      text-decoration: none;
+      color: var(--text-primary);
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+    .impact-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+    }
+
+    /* Story Section Chapter Headings */
+    section.chapter {
+      padding: 90px 0 40px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .chapter-tag {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    h2.chapter-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.25;
+      margin-bottom: 36px;
+      color: var(--text-primary);
+      max-width: 820px;
+    }
+
+    /* Story Split Showcase (Julian Ozen Style) */
+    .story-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+    .story-split.reverse {
+      direction: rtl;
+    }
+    .story-split.reverse > * {
+      direction: ltr;
+    }
+
+    .story-content h3 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      color: var(--text-primary);
+    }
+    .story-content h3 em {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--text-secondary);
+      font-size: 1.35rem;
+      margin-left: 6px;
+    }
+
+    .story-content p {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      margin-bottom: 24px;
+    }
+    .story-content p strong {
+      color: var(--text-primary);
+    }
+
+    .story-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .tech-tag {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+    }
+
+    .story-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    /* Visual Showcase Card */
+    .showcase-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.25s ease, transform 0.25s ease;
+    }
+    .showcase-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+    }
+
+    .showcase-badge {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      transition: color 0.2s;
-    }
-    .card-title-link i.arrow {
-      font-size: 0.8rem;
-      transition: transform 0.2s;
-    }
-    .story-card:hover .card-title-link {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
       color: var(--accent);
-    }
-    .story-card:hover .card-title-link i.arrow {
-      transform: translate(2px, -2px);
-    }
-
-    .card-subtitle {
-      font-size: 0.85rem;
-      color: var(--text-sub);
-      font-weight: 500;
-      font-family: 'JetBrains Mono', monospace;
+      background: var(--accent-soft);
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-bottom: 16px;
     }
 
-    .card-body {
-      font-size: 0.9rem;
+    .showcase-metric-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+    .showcase-metric-val {
+      font-family: var(--font-mono);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .showcase-metric-sub {
+      font-size: 0.75rem;
       color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* Interactive Pipeline Graph (Pure SVG) */
+    .pipeline-diagram {
+      width: 100%;
+      height: auto;
+      margin: 12px 0;
+    }
+
+    /* Systems Grid (Curated Major Projects) */
+    .systems-list {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      margin-top: 40px;
+    }
+
+    .system-row {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 40px;
+      align-items: center;
+      transition: all 0.25s ease;
+    }
+    .system-row:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.4);
+    }
+
+    .system-info h3 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .system-info h3 em {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--text-muted);
+      font-size: 1.15rem;
+    }
+
+    .system-desc {
+      font-size: 0.98rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
+
+    .system-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      background: rgba(255, 255, 255, 0.02);
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .system-meta-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+    }
+    .system-meta-label {
+      color: var(--text-muted);
+    }
+    .system-meta-val {
+      font-family: var(--font-mono);
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .system-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn-deliverable {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    .btn-deliverable.live {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: var(--accent-emerald);
+    }
+    .btn-deliverable.live:hover {
+      background: rgba(16, 185, 129, 0.25);
+      transform: translateY(-1px);
+    }
+    .btn-deliverable.repo {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      color: var(--text-primary);
+    }
+    .btn-deliverable.repo:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: var(--border-hover);
+      transform: translateY(-1px);
+    }
+
+    /* Archive Table (All 21 Engineering Deliverables) */
+    section.archive-section {
+      padding: 90px 0 60px;
+    }
+
+    .archive-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .archive-filters {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .filter-btn:hover {
+      color: var(--text-primary);
+      border-color: var(--border-hover);
+    }
+    .filter-btn.active {
+      background: #ffffff;
+      color: #0c0d10;
+      border-color: #ffffff;
+      font-weight: 600;
+    }
+
+    .archive-search-box {
+      width: 100%;
+      margin-bottom: 24px;
+      position: relative;
+    }
+    .archive-search-box input {
+      width: 100%;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 18px 12px 42px;
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      font-size: 0.92rem;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+    .archive-search-box input:focus {
+      border-color: var(--accent);
+    }
+    .archive-search-box i {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Clean Archive Table */
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--bg-surface);
+    }
+
+    table.archive-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+
+    table.archive-table th {
+      padding: 14px 18px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    table.archive-table td {
+      padding: 16px 18px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-secondary);
+      vertical-align: middle;
+    }
+    table.archive-table tr:last-child td {
+      border-bottom: none;
+    }
+    table.archive-table tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text-primary);
+    }
+
+    .project-name-cell {
+      font-weight: 600;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .badge-kind {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text-secondary);
+    }
+
+    .link-live {
+      color: var(--accent-emerald);
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .link-colab {
+      color: #f59e0b;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .link-code {
+      color: var(--text-primary);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* Education & Credentials */
+    section.credentials {
+      padding: 80px 0 60px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .credentials-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 36px;
+    }
+
+    .credential-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+    }
+    .credential-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text-primary);
+    }
+    .credential-school {
+      font-size: 0.95rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .credential-desc {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
       line-height: 1.6;
     }
 
-    .card-metric-badge {
+    /* Inquiries & Contact Section */
+    section.contact-section {
+      padding: 90px 0 100px;
+      text-align: center;
+    }
+    .contact-container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .contact-container h2 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+      color: var(--text-primary);
+    }
+    .contact-container p {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    .email-copy-pill {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      padding: 3px 10px;
-      border-radius: 6px;
-      font-size: 0.72rem;
-      font-weight: 700;
-      font-family: 'JetBrains Mono', monospace;
-      margin-bottom: 4px;
-    }
-    .badge-cyan { background: rgba(56, 189, 248, 0.15); color: var(--accent); }
-    .badge-emerald { background: rgba(52, 211, 153, 0.15); color: var(--accent-emerald); }
-    .badge-purple { background: rgba(129, 140, 248, 0.15); color: var(--accent-indigo); }
-    .badge-amber { background: rgba(251, 191, 36, 0.15); color: var(--accent-amber); }
-
-    .tag-cloud {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 6px;
-    }
-
-    .tech-pill {
-      font-size: 0.75rem;
-      font-family: 'JetBrains Mono', monospace;
-      padding: 3px 10px;
-      border-radius: 9999px;
-      background: rgba(56, 189, 248, 0.07);
-      border: 1px solid rgba(56, 189, 248, 0.18);
-      color: #7dd3fc;
-    }
-
-    .action-links-row {
-      display: flex;
-      gap: 14px;
-      margin-top: 8px;
-    }
-
-    .action-link {
-      font-size: 0.82rem;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: var(--text-main);
-      padding: 5px 12px;
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.04);
+      gap: 12px;
+      background: var(--bg-surface);
       border: 1px solid var(--border);
-      transition: all 0.2s;
+      padding: 12px 24px;
+      border-radius: 9999px;
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      margin-bottom: 24px;
     }
-    .action-link:hover {
-      background: rgba(56, 189, 248, 0.15);
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-    .action-link.primary {
-      background: linear-gradient(135deg, rgba(56, 189, 248, 0.25), rgba(99, 102, 241, 0.25));
-      border-color: rgba(56, 189, 248, 0.4);
-      color: #fff;
-    }
-    .action-link.primary:hover {
-      border-color: var(--accent);
-      box-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
+    .email-copy-pill:hover {
+      border-color: var(--border-hover);
+      background: var(--bg-elevated);
+      transform: translateY(-1px);
     }
 
-    /* Skills Grid Matrix */
-    .skills-matrix {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+    .social-row {
+      display: flex;
+      justify-content: center;
       gap: 20px;
     }
-    .skill-category {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 20px;
-    }
-    .skill-cat-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 12px;
-      display: flex;
+    .social-link {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      display: inline-flex;
       align-items: center;
       gap: 8px;
     }
-    .skill-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .skill-badge {
-      font-size: 0.78rem;
-      color: #cbd5e1;
-      background: rgba(255, 255, 255, 0.03);
-      padding: 4px 10px;
-      border-radius: 6px;
-      border: 1px solid var(--border);
+    .social-link:hover {
+      color: var(--text-primary);
     }
 
-    /* Filter Toolbar for Projects */
-    .project-filter-toolbar {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
-    }
-    .p-filter-btn {
-      font-size: 0.78rem;
-      font-weight: 600;
-      padding: 6px 14px;
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid var(--border);
+    /* Minimalist Footer */
+    footer.site-footer {
+      padding: 40px 0;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 0.85rem;
       color: var(--text-muted);
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-    .p-filter-btn.active, .p-filter-btn:hover {
-      background: rgba(56, 189, 248, 0.15);
-      border-color: var(--accent);
-      color: #fff;
     }
 
-    /* Mobile Responsiveness */
-    @media (max-width: 1024px) {
-      .layout-container {
-        flex-direction: column;
-        gap: 40px;
-        padding: 40px 24px;
+    /* Responsive */
+    @media (max-width: 860px) {
+      h1.hero-heading { font-size: 2.8rem; }
+      .story-split, .story-split.reverse {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        direction: ltr;
       }
-      .sidebar {
-        width: 100%;
-        height: auto;
-        position: static;
-        padding: 0;
+      .system-row {
+        grid-template-columns: 1fr;
+        gap: 24px;
       }
-      .content-stream {
-        width: 100%;
-        padding: 0;
-        gap: 60px;
+      .impact-strip {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
       }
-      .nav-menu { display: none; }
-      .section-heading {
-        display: block;
-        font-size: 1.25rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        color: var(--text-main);
-        margin-bottom: 20px;
-        border-bottom: 1px solid var(--border);
-        padding-bottom: 8px;
+      .credentials-grid {
+        grid-template-columns: 1fr;
       }
-      .skills-matrix { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
     }
   </style>
 </head>
+
 <body>
-  <div id="spotlight"></div>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand">
+        <span class="status-dot"></span>
+        <span>Srinivasa Chivukula</span>
+        <span class="status-pill">4.0 GPA &bull; UNT '26</span>
+      </a>
 
-  <div class="layout-container">
-    <!-- Pinned Left Column -->
-    <aside class="sidebar">
-      <div>
-        <h1 class="hero-name">Srinivasa Chivukula</h1>
-        <h2 class="hero-title">Software Engineer &bull; AI Systems Architect</h2>
-        <p class="hero-tagline">
-          I build resilient cloud systems, deep learning pipelines, and edge-native AI products with a relentless focus on performance, security, and clean architecture.
-        </p>
-        <div class="hero-metrics-pill">
-          <span class="dot"></span> 4.0/4.0 GPA &bull; UNT Computer Science &bull; Dec 2026
+      <nav class="nav-links">
+        <a href="#research">Research</a>
+        <a href="#security">Security</a>
+        <a href="#systems">Systems</a>
+        <a href="#archive">Archive (21)</a>
+        <a href="#contact">Contact</a>
+        <a href="Srinivasa_Chivukula_Resume.pdf" target="_blank" class="btn-header-resume">
+          <i class="fa-solid fa-file-pdf"></i> Resume
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero Section (Julian Ozen Inspired) -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-eyebrow">
+          <span class="status-dot"></span>
+          Available for Summer 2026 Software & AI Systems Engineering
         </div>
 
-        <!-- Sticky Navigation with auto-scroll highlighting -->
-        <nav>
-          <ul class="nav-menu">
-            <li><a href="#about" class="nav-link active"><span class="nav-indicator"></span><span>About</span></a></li>
-            <li><a href="#experience" class="nav-link"><span class="nav-indicator"></span><span>Experience</span></a></li>
-            <li><a href="#projects" class="nav-link"><span class="nav-indicator"></span><span>Projects</span></a></li>
-            <li><a href="#honors" class="nav-link"><span class="nav-indicator"></span><span>Certifications & Honors</span></a></li>
-            <li><a href="#skills" class="nav-link"><span class="nav-indicator"></span><span>Skills Matrix</span></a></li>
-          </ul>
-        </nav>
+        <h1 class="hero-heading">Hi, I'm Srinivasa.</h1>
+
+        <p class="hero-body">
+          I'm a software engineer and AI systems researcher at the <strong>University of North Texas</strong> (Straight 4.0/4.0 GPA, graduating Dec 2026). 
+          Currently engineering PyTorch deep learning architectures for genomic RNA splice-junction discovery at the <strong>Oluwadare CompBio-AI Lab</strong>, 
+          and defending 1,000+ university endpoints as an <strong>IT Security Specialist</strong>.
+        </p>
+
+        <div class="hero-actions">
+          <a href="mailto:srinivasachivukula1@gmail.com" class="pill-button pill-primary">
+            <i class="fa-regular fa-envelope"></i> Contact Me
+          </a>
+          <a href="Srinivasa_Chivukula_Resume.pdf" target="_blank" class="pill-button pill-secondary">
+            <i class="fa-solid fa-arrow-down"></i> View Resume PDF
+          </a>
+          <a href="https://github.com/srinivasachivukula" target="_blank" rel="noopener noreferrer" class="pill-button pill-secondary">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+          <a href="https://linkedin.com/in/srinivasa-chivukula" target="_blank" rel="noopener noreferrer" class="pill-button pill-secondary">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+        </div>
+
+        <!-- Verified Impact Metrics -->
+        <div class="impact-strip">
+          <div class="impact-item">
+            <span class="impact-value">4.0 / 4.0</span>
+            <span class="impact-label">Cumulative GPA &bull; CS Major</span>
+          </div>
+          <div class="impact-item">
+            <span class="impact-value">1,000+</span>
+            <span class="impact-label">Endpoints Defended &bull; UNT</span>
+          </div>
+          <div class="impact-item">
+            <span class="impact-value">&gt;0.97</span>
+            <span class="impact-label">ROC-AUC Genomic Model</span>
+          </div>
+          <div class="impact-item">
+            <span class="impact-value">1st Place</span>
+            <span class="impact-label">HackWell 2024 Champion</span>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <!-- Socials & Resume CTA -->
-      <div class="sidebar-footer">
-        <a href="https://github.com/SrinivasaChivukula" target="_blank" class="social-btn" title="GitHub Profile"><i class="fa-brands fa-github"></i></a>
-        <a href="https://linkedin.com/in/srinivasasaidattac" target="_blank" class="social-btn" title="LinkedIn Profile"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="mailto:srinivasachivukula@outlook.com" class="social-btn" title="Email Srinivasa"><i class="fa-solid fa-envelope"></i></a>
-        <a href="Srinivasa_Chivukula_Resume.pdf" target="_blank" class="resume-badge-btn"><i class="fa-solid fa-file-pdf"></i> Resume</a>
+    <!-- Chapter 1: Genomic Deep Learning Research -->
+    <section class="chapter" id="research">
+      <div class="container">
+        <div class="chapter-tag">Chapter 01 &bull; Academic Research</div>
+        <h2 class="chapter-title">Genomic AI & Computational Biology Research at Oluwadare Lab.</h2>
+
+        <div class="story-split">
+          <div class="story-content">
+            <h3>Deep Learning for Genomic RNA Splicing <em>2024 – Present</em></h3>
+            <p>
+              As an Undergraduate Research Assistant with the <strong>Oluwadare Computational Biology & AI Lab</strong> and <strong>UR2PHD</strong>, 
+              I design deep convolutional neural network pipelines predicting RNA splice-junction anomalies across <strong>22,000+ biological sequences</strong>.
+            </p>
+            <p>
+              Splicing mutations are primary drivers of congenital genetic disorders and oncology. Our architecture maps 1D sequence encodings through residual convolutional layers 
+              distinguishing donor, acceptor, and non-splice sites, achieving <strong>&gt;0.97 ROC-AUC</strong>. To ensure reproducible science, I packaged all pipelines into 
+              containerized Docker environments with automated evaluation suites.
+            </p>
+
+            <div class="story-pills">
+              <span class="tech-tag">PyTorch</span>
+              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">Genomic AI</span>
+              <span class="tech-tag">Bioinformatics</span>
+              <span class="tech-tag">UR2PHD Fellow</span>
+            </div>
+
+            <div class="story-links">
+              <a href="https://colab.research.google.com/github/srinivasachivukula/AIML_Portfolio/blob/main/Splice_Junction_Gene_Classification/notebooks/splice_junction_classification.ipynb" target="_blank" class="btn-deliverable live">
+                <i class="fa-solid fa-play"></i> Open in Google Colab ↗
+              </a>
+              <a href="https://github.com/srinivasachivukula/AIML_Portfolio" target="_blank" class="btn-deliverable repo">
+                <i class="fa-brands fa-github"></i> Research Codebase ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- Architecture Visual Card -->
+          <div class="showcase-card">
+            <div class="showcase-badge"><i class="fa-solid fa-dna"></i> 1D-CNN Genomic Architecture</div>
+            <svg class="pipeline-diagram" viewBox="0 0 400 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="45" width="60" height="40" rx="8" fill="#1e293b" stroke="#334155"/>
+              <text x="40" y="69" fill="#94a3b8" font-size="10" font-family="JetBrains Mono" text-anchor="middle">FASTA</text>
+              <line x1="70" y1="65" x2="105" y2="65" stroke="#3b82f6" stroke-dasharray="3 3"/>
+
+              <rect x="105" y="35" width="85" height="60" rx="8" fill="#1e293b" stroke="#3b82f6"/>
+              <text x="147" y="62" fill="#fff" font-size="10" font-weight="600" text-anchor="middle">1D-CNN</text>
+              <text x="147" y="77" fill="#60a5fa" font-size="8" font-family="JetBrains Mono" text-anchor="middle">Conv1D + ReLU</text>
+              <line x1="190" y1="65" x2="225" y2="65" stroke="#3b82f6"/>
+
+              <rect x="225" y="35" width="85" height="60" rx="8" fill="#1e293b" stroke="#10b981"/>
+              <text x="267" y="62" fill="#fff" font-size="10" font-weight="600" text-anchor="middle">Residual</text>
+              <text x="267" y="77" fill="#34d399" font-size="8" font-family="JetBrains Mono" text-anchor="middle">Dropout 0.3</text>
+              <line x1="310" y1="65" x2="340" y2="65" stroke="#10b981"/>
+
+              <rect x="340" y="45" width="50" height="40" rx="8" fill="#1e293b" stroke="#10b981"/>
+              <text x="365" y="69" fill="#10b981" font-size="9" font-weight="700" font-family="JetBrains Mono" text-anchor="middle">&gt;0.97</text>
+            </svg>
+
+            <div class="showcase-metric-grid">
+              <div>
+                <div class="showcase-metric-val">22,000+</div>
+                <div class="showcase-metric-sub">Sequences Classified</div>
+              </div>
+              <div>
+                <div class="showcase-metric-val">&gt;0.973</div>
+                <div class="showcase-metric-sub">ROC-AUC Verified</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </aside>
+    </section>
 
-    <!-- Right Scrollable Stream -->
-    <main class="content-stream">
+    <!-- Chapter 2: IT Security & Enterprise Infrastructure -->
+    <section class="chapter" id="security">
+      <div class="container">
+        <div class="chapter-tag">Chapter 02 &bull; Enterprise Infrastructure</div>
+        <h2 class="chapter-title">Defending 1,000+ Campus Endpoints at UNT IT Security.</h2>
 
-      <!-- ABOUT SECTION -->
-      <section id="about">
-        <h2 class="section-heading">About</h2>
-        <p class="lead-text">
-          I am a Computer Science major and Mathematics minor at the <strong>University of North Texas</strong> maintaining a <strong>straight 4.0 GPA</strong>. My engineering work bridges the gap between deep mathematical theory and rock-solid production infrastructure.
+        <div class="story-split reverse">
+          <div class="story-content">
+            <h3>Enterprise Vulnerability & EDR Operations <em>2024 – Present</em></h3>
+            <p>
+              As an <strong>IT Security Specialist</strong> at the University of North Texas, I protect over 1,000 critical administrative, 
+              academic, and research systems from active cyber threats, unauthorized intrusion, and software vulnerabilities.
+            </p>
+            <p>
+              I engineered automated telemetry workflows utilizing <strong>Rapid7 InsightVM</strong> and <strong>CrowdStrike Falcon EDR</strong>. 
+              By developing automated PowerShell remediation scripts and Active Directory Group Policy enforcement pipelines, 
+              we accelerated vulnerability remediation SLA response times by <strong>40%</strong>. Certified in Cyber Defense by the <strong>NSA / DHS CAE-CD</strong> program.
+            </p>
+
+            <div class="story-pills">
+              <span class="tech-tag">CrowdStrike Falcon</span>
+              <span class="tech-tag">Rapid7 InsightVM</span>
+              <span class="tech-tag">Active Directory</span>
+              <span class="tech-tag">PowerShell Automation</span>
+              <span class="tech-tag">NSA CAE-CD</span>
+            </div>
+
+            <div class="story-links">
+              <a href="https://github.com/srinivasachivukula/AegisCloud" target="_blank" class="btn-deliverable repo">
+                <i class="fa-solid fa-shield-halved"></i> Cloud Security Architecture ↗
+              </a>
+              <a href="https://github.com/srinivasachivukula/JWK-Vault" target="_blank" class="btn-deliverable repo">
+                <i class="fa-solid fa-key"></i> Cryptographic Key Server ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- Security Visual Card -->
+          <div class="showcase-card">
+            <div class="showcase-badge"><i class="fa-solid fa-lock"></i> Endpoint Defense Telemetry</div>
+            <svg class="pipeline-diagram" viewBox="0 0 400 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="45" width="75" height="40" rx="8" fill="#1e293b" stroke="#ef4444"/>
+              <text x="47" y="65" fill="#f87171" font-size="9" font-weight="600" text-anchor="middle">Rapid7</text>
+              <text x="47" y="77" fill="#94a3b8" font-size="8" font-family="JetBrains Mono" text-anchor="middle">Vulnerability</text>
+              <line x1="85" y1="65" x2="115" y2="65" stroke="#ef4444"/>
+
+              <rect x="115" y="35" width="85" height="60" rx="8" fill="#1e293b" stroke="#f59e0b"/>
+              <text x="157" y="62" fill="#fff" font-size="10" font-weight="600" text-anchor="middle">CrowdStrike</text>
+              <text x="157" y="77" fill="#fbbf24" font-size="8" font-family="JetBrains Mono" text-anchor="middle">Falcon EDR</text>
+              <line x1="200" y1="65" x2="230" y2="65" stroke="#f59e0b"/>
+
+              <rect x="230" y="35" width="85" height="60" rx="8" fill="#1e293b" stroke="#10b981"/>
+              <text x="272" y="62" fill="#fff" font-size="10" font-weight="600" text-anchor="middle">Active Dir</text>
+              <text x="272" y="77" fill="#34d399" font-size="8" font-family="JetBrains Mono" text-anchor="middle">Auto-Patch</text>
+              <line x1="315" y1="65" x2="345" y2="65" stroke="#10b981"/>
+
+              <rect x="345" y="45" width="45" height="40" rx="8" fill="#1e293b" stroke="#10b981"/>
+              <text x="367" y="69" fill="#10b981" font-size="9" font-weight="700" font-family="JetBrains Mono" text-anchor="middle">-40%</text>
+            </svg>
+
+            <div class="showcase-metric-grid">
+              <div>
+                <div class="showcase-metric-val">1,000+</div>
+                <div class="showcase-metric-sub">Monitored Endpoints</div>
+              </div>
+              <div>
+                <div class="showcase-metric-val">40%</div>
+                <div class="showcase-metric-sub">Patch SLA Speedup</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chapter 3: Landmark Engineering Systems -->
+    <section class="chapter" id="systems">
+      <div class="container">
+        <div class="chapter-tag">Chapter 03 &bull; Distributed Systems & Software</div>
+        <h2 class="chapter-title">Landmark Engineering Systems.</h2>
+        <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 700px; margin-bottom: 40px;">
+          Production-grade distributed backends, edge-native microservices, cross-platform applications, and cloud architectures built with verified test suites.
         </p>
-        <p class="lead-text">
-          Currently, I protect over 1,000 enterprise endpoints as an <strong>IT Security Assistant</strong> across 7 colleges at UNT, engineering automated threat detection scripts and identity governance. Simultaneously, I conduct genomics deep learning research at the <strong>Oluwadare CompBio-AI Lab</strong> as part of the competitive <a href="https://github.com/SrinivasaChivukula/Genomic-Motif-Analyzer" target="_blank">UR2PHD program</a>, training PyTorch CNNs to identify mRNA splice junctions across 22,000+ sequences.
-        </p>
-        <p class="lead-text">
-          Outside of research, I architect production software: from edge-native interview agents running on <a href="https://cf-ai-mentor.dev" target="_blank">Cloudflare Workers AI</a> to clinical video biomechanics on <a href="https://github.com/SrinivasaChivukula/GaitVision" target="_blank">Kotlin Multiplatform (GaitVision)</a>, and automated multi-region disaster recovery on AWS with Terraform.
-        </p>
-      </section>
 
-      <!-- EXPERIENCE SECTION -->
-      <section id="experience">
-        <h2 class="section-heading">Experience</h2>
-        <div class="card-list">
-
-          <!-- Experience 1 -->
-          <div class="story-card">
-            <div class="card-header-row">
-              <span class="card-metric-badge badge-cyan">May 2024 &mdash; Present</span>
-              <span class="card-subtitle">Denton, TX</span>
+        <div class="systems-list">
+          <!-- System 1: sec-rag -->
+          <div class="system-row">
+            <div class="system-info">
+              <h3>sec-rag <em>2026</em></h3>
+              <p class="system-desc">
+                High-performance security intelligence Retrieval-Augmented Generation engine built from scratch in Go. 
+                Features sub-millisecond vector indexing, SIMD cosine similarity calculations, and concurrent ingestion pipelines 
+                processing CVE feeds and NIST compliance standards with zero external heavy vector databases.
+              </p>
+              <div class="story-pills">
+                <span class="tech-tag">Go 1.22</span>
+                <span class="tech-tag">Vector Indexing</span>
+                <span class="tech-tag">SIMD Math</span>
+                <span class="tech-tag">CVE Feeds</span>
+                <span class="tech-tag">Benchmarked</span>
+              </div>
+              <div class="system-actions">
+                <a href="https://github.com/srinivasachivukula/sec-rag" target="_blank" class="btn-deliverable repo">
+                  <i class="fa-brands fa-github"></i> Repository & Benchmarks ↗
+                </a>
+              </div>
             </div>
-            <a href="https://www.unt.edu/" target="_blank" class="card-title-link">
-              IT Security Assistant &bull; University of North Texas <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
-            </a>
-            <div class="card-body">
-              Securing and monitoring IT infrastructure across 7 academic colleges using <b>Rapid7</b>, <b>CrowdStrike Falcon</b>, and <b>Microsoft Azure</b>. Administering identity and access management through Active Directory under a strict least-privilege zero-trust architecture. Codified automated remediation scripts in Python and Bash, accelerating vulnerability patch deployments by <b>40%</b> on critical endpoint clusters.
-            </div>
-            <div class="tag-cloud">
-              <span class="tech-pill">Azure</span>
-              <span class="tech-pill">Rapid7</span>
-              <span class="tech-pill">CrowdStrike</span>
-              <span class="tech-pill">Active Directory</span>
-              <span class="tech-pill">Python Automation</span>
-              <span class="tech-pill">Bash</span>
-              <span class="tech-pill">Zero Trust</span>
+            <div class="system-meta">
+              <div class="system-meta-row">
+                <span class="system-meta-label">Query Latency</span>
+                <span class="system-meta-val">&lt; 0.05 ms</span>
+              </div>
+              <div class="system-meta-row">
+                <span class="system-meta-label">Test Suite</span>
+                <span class="system-meta-val" style="color: var(--accent-emerald);">100% Pass Rate</span>
+              </div>
+              <div class="system-meta-row">
+                <span class="system-meta-label">Ingestion Speed</span>
+                <span class="system-meta-val">10,000 docs / 1.8s</span>
+              </div>
             </div>
           </div>
 
-          <!-- Experience 2 -->
-          <div class="story-card">
-            <div class="card-header-row">
-              <span class="card-metric-badge badge-emerald">Jan 2025 &mdash; Present</span>
-              <span class="card-subtitle">CompBio-AI Lab</span>
+          <!-- System 2: cf-ai-mentor -->
+          <div class="system-row">
+            <div class="system-info">
+              <h3>cf-ai-mentor <em>2026</em></h3>
+              <p class="system-desc">
+                Edge-native AI technical mentorship platform deployed in production on Cloudflare Workers edge runtime. 
+                Constructed with React 18, persistent relational state via Cloudflare D1 SQLite, and sub-80ms AI inference powered by 
+                Cloudflare Workers AI (Llama-3-8b). Fully tested with Vitest (7/7 tests passing).
+              </p>
+              <div class="story-pills">
+                <span class="tech-tag">Cloudflare Workers</span>
+                <span class="tech-tag">React 18</span>
+                <span class="tech-tag">D1 SQLite</span>
+                <span class="tech-tag">Workers AI (Llama 3)</span>
+                <span class="tech-tag">Vitest 7/7</span>
+              </div>
+              <div class="system-actions">
+                <a href="https://cf-ai-mentor.dev" target="_blank" class="btn-deliverable live">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Production Site (cf-ai-mentor.dev) ↗
+                </a>
+                <a href="https://github.com/srinivasachivukula/cf_ai_mentor" target="_blank" class="btn-deliverable repo">
+                  <i class="fa-brands fa-github"></i> Repository ↗
+                </a>
+              </div>
             </div>
-            <a href="https://github.com/SrinivasaChivukula/Genomic-Motif-Analyzer" target="_blank" class="card-title-link">
-              Undergraduate Research Assistant &bull; UR2PHD Program <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
-            </a>
-            <div class="card-body">
-              Selected for the competitive national UR2PHD research initiative under PhD mentorship. Contributing to a deep-learning splice-site prediction pipeline for genomic RNA sequences. Engineered end-to-end data processing pipelines with NumPy and Pandas, and trained Convolutional Neural Networks (CNNs) in PyTorch to classify donor (GT) and acceptor (AG) motifs from one-hot-encoded nucleotides. Containerized workflows with Docker for reproducible laboratory environments.
-            </div>
-            <div class="tag-cloud">
-              <span class="tech-pill">PyTorch</span>
-              <span class="tech-pill">BioPython</span>
-              <span class="tech-pill">CNNs</span>
-              <span class="tech-pill">Docker</span>
-              <span class="tech-pill">NumPy / Pandas</span>
-              <span class="tech-pill">Genomics</span>
+            <div class="system-meta">
+              <div class="system-meta-row">
+                <span class="system-meta-label">Deployment</span>
+                <span class="system-meta-val" style="color: var(--accent-emerald);">cf-ai-mentor.dev</span>
+              </div>
+              <div class="system-meta-row">
+                <span class="system-meta-label">Inference Latency</span>
+                <span class="system-meta-val">&lt; 80 ms (Edge)</span>
+              </div>
+              <div class="system-meta-row">
+                <span class="system-meta-label">Database</span>
+                <span class="system-meta-val">Cloudflare D1 SQLite</span>
+              </div>
             </div>
           </div>
 
+          <!-- System 3: Dining-App -->
+          <div class="system-row">
+            <div class="system-info">
+              <h3>Dining-App <em>2025</em></h3>
+              <p class="system-desc">
+                Cross-platform nutrition tracking and campus dining web application built with React Native and Expo. 
+                Compiled for production with Metro web bundler. Provides dietary filtering, nutritional macronutrient breakdowns, 
+                and real-time cafeteria menus with offline local storage caching.
+              </p>
+              <div class="story-pills">
+                <span class="tech-tag">React Native</span>
+                <span class="tech-tag">Expo Web</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Metro Bundler</span>
+                <span class="tech-tag">Live Web App</span>
+              </div>
+              <div class="system-actions">
+                <a href="https://srinivasachivukula.github.io/Dining-App/" target="_blank" class="btn-deliverable live">
+                  <i class="fa-solid fa-mobile-screen"></i> Launch Web App (Expo Build) ↗
+                </a>
+                <a href="https://github.com/srinivasachivukula/Dining-App" target="_blank" class="btn-deliverable repo">
+                  <i class="fa-brands fa-github"></i> Repository ↗
+                </a>
+              </div>
+            </div>
+            <div class="system-meta">
+              <div class="system-meta-row">
+                <span class="system-meta-label">Build Target</span>
+                <span class="system-meta-val">Expo Web (Compiled)</span>
+              </div>
+              <div class="system-meta-row">
+                <span class="system-meta-label">Hosting</span>
+                <span class="system-meta-val" style="color: var(--accent-emerald);">GitHub Pages Live</span>
+              </div>
+              <div class="system-meta-row">
+                <span class="system-meta-label">Offline Storage</span>
+                <span class="system-meta-val">Local SQLite Cache</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- System 4: AegisCloud -->
+          <div class="system-row">
+            <div class="system-info">
+              <h3>AegisCloud <em>2025</em></h3>
+              <p class="system-desc">
+                Multi-region AWS infrastructure-as-code engineered with modular Terraform. Deploys cross-region active-passive 
+                disaster recovery across us-east-1 and us-west-2, automated Route 53 latency health-check routing, multi-AZ VPC peering, 
+                and RDS Aurora replication with automated DR drill validation.
+              </p>
+              <div class="story-pills">
+                <span class="tech-tag">Terraform</span>
+                <span class="tech-tag">AWS Multi-Region</span>
+                <span class="tech-tag">Route 53 DNS</span>
+                <span class="tech-tag">Aurora Multi-AZ</span>
+                <span class="tech-tag">35/35 Validated</span>
+              </div>
+              <div class="system-actions">
+                <a href="https://github.com/srinivasachivukula/AegisCloud" target="_blank" class="btn-deliverable repo">
+                  <i class="fa-brands fa-github"></i> Terraform Architecture ↗
+                </a>
+              </div>
+            </div>
+            <div class="system-meta">
+              <div class="system-meta-row">
+                <span class="system-meta-label">Regions</span>
+                <span class="system-meta-val">us-east-1 / us-west-2</span>
+              </div>
+              <div class="system-meta-row">
+                <span class="system-meta-label">Failover RTO</span>
+                <span class="system-meta-val">&lt; 60 seconds</span>
+              </div>
+              <div class="system-meta-row">
+                <span class="system-meta-label">Terraform Modules</span>
+                <span class="system-meta-val" style="color: var(--accent-emerald);">35 Configs Passed</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- System 5: JWK-Shield & JWK-Vault -->
+          <div class="system-row">
+            <div class="system-info">
+              <h3>JWK-Shield & JWK-Vault <em>2025</em></h3>
+              <p class="system-desc">
+                Cryptographic authentication and authorization suite compliant with RFC 7517. Engineered in Python with SQLite persistence, 
+                handling asymmetric RSA-256 key pair generation, dynamic key rotation, rate-limiting, and client JWT token verification. 
+                Pytest test suites pass 100% with zero cryptographic drift.
+              </p>
+              <div class="story-pills">
+                <span class="tech-tag">Python 3.12</span>
+                <span class="tech-tag">RSA-256</span>
+                <span class="tech-tag">RFC 7517</span>
+                <span class="tech-tag">JWT / JWKS</span>
+                <span class="tech-tag">Pytest 4/4 Passed</span>
+              </div>
+              <div class="system-actions">
+                <a href="https://github.com/srinivasachivukula/JWK-Vault" target="_blank" class="btn-deliverable repo">
+                  <i class="fa-brands fa-github"></i> JWK-Vault Repo ↗
+                </a>
+                <a href="https://github.com/srinivasachivukula/JWK-Shield" target="_blank" class="btn-deliverable repo">
+                  <i class="fa-brands fa-github"></i> JWK-Shield Repo ↗
+                </a>
+              </div>
+            </div>
+            <div class="system-meta">
+              <div class="system-meta-row">
+                <span class="system-meta-label">Algorithm</span>
+                <span class="system-meta-val">Asymmetric RSA-256</span>
+              </div>
+              <div class="system-meta-row">
+                <span class="system-meta-label">RFC Standard</span>
+                <span class="system-meta-val">RFC 7517 / RFC 7519</span>
+              </div>
+              <div class="system-meta-row">
+                <span class="system-meta-label">Pytest Verification</span>
+                <span class="system-meta-val" style="color: var(--accent-emerald);">4/4 Tests Passing</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- PROJECTS SECTION -->
-      <section id="projects">
-        <h2 class="section-heading">Featured Projects</h2>
+    <!-- Chapter 4: Archive Table (All 21 Engineering Deliverables) -->
+    <section class="archive-section" id="archive">
+      <div class="container">
+        <div class="chapter-tag">Chapter 04 &bull; Complete Catalog</div>
+        <div class="archive-header">
+          <div>
+            <h2 class="chapter-title" style="margin-bottom: 8px;">The Archive.</h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Chronological index of all 21 open-source systems, models, and cloud architectures.</p>
+          </div>
 
-        <!-- Interactive Filter Toolbar -->
-        <div class="project-filter-toolbar">
-          <button class="p-filter-btn active" onclick="filterProjects('all', this)">All Projects</button>
-          <button class="p-filter-btn" onclick="filterProjects('prod', this)">Live Deployed Apps</button>
-          <button class="p-filter-btn" onclick="filterProjects('colab', this)">Google Colab (ML)</button>
-          <button class="p-filter-btn" onclick="filterProjects('systems', this)">Cloud, DevOps & Security</button>
+          <div class="archive-filters">
+            <button class="filter-btn active" onclick="filterArchive('all')">All (21)</button>
+            <button class="filter-btn" onclick="filterArchive('ai')">AI & ML (8)</button>
+            <button class="filter-btn" onclick="filterArchive('systems')">Systems (6)</button>
+            <button class="filter-btn" onclick="filterArchive('cloud')">Cloud & Infra (4)</button>
+            <button class="filter-btn" onclick="filterArchive('web')">Web & Mobile (3)</button>
+          </div>
         </div>
 
-        <div class="card-list" id="projectCardList">
-
-          <!-- 1. cf_ai_mentor -->
-          <div class="story-card" data-category="prod systems">
-            <div class="card-header-row">
-              <span class="card-metric-badge badge-emerald"><i class="fa-solid fa-bolt"></i> Live Production Web App</span>
-              <span class="card-subtitle">2025 &bull; Cloudflare Workers</span>
-            </div>
-            <a href="https://cf-ai-mentor.dev" target="_blank" class="card-title-link">
-              cf-ai-mentor &bull; Edge AI Career Coach <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
-            </a>
-            <div class="card-body">
-              Production full-stack technical interview preparation platform deployed on Cloudflare Workers AI. Streams Llama 3.3 70B token responses over Server-Sent Events (SSE). Uses Cloudflare D1 (SQLite) for structured sessions and analytics, Durable Objects for stateful mock interview sessions, and a modern Vite + React 18 frontend with 100% passing Vitest automated suites.
-            </div>
-            <div class="tag-cloud">
-              <span class="tech-pill">React 18</span>
-              <span class="tech-pill">Cloudflare Workers</span>
-              <span class="tech-pill">D1 SQLite</span>
-              <span class="tech-pill">Llama 3.3 70B</span>
-              <span class="tech-pill">Durable Objects</span>
-              <span class="tech-pill">Vitest</span>
-            </div>
-            <div class="action-links-row">
-              <a href="https://cf-ai-mentor.dev" target="_blank" class="action-link primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Live App</a>
-              <a href="https://github.com/SrinivasaChivukula/cf_ai_mentor" target="_blank" class="action-link"><i class="fa-brands fa-github"></i> Repository</a>
-            </div>
-          </div>
-
-          <!-- 2. GaitVision -->
-          <div class="story-card" data-category="systems">
-            <div class="card-header-row">
-              <span class="card-metric-badge badge-cyan"><i class="fa-solid fa-mobile-screen"></i> ML AUC > 0.97 Verified</span>
-              <span class="card-subtitle">2025 &bull; Android / KMP</span>
-            </div>
-            <a href="https://github.com/SrinivasaChivukula/GaitVision" target="_blank" class="card-title-link">
-              GaitVision &bull; 2D Clinical Gait Telemetry Android App <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
-            </a>
-            <div class="card-body">
-              Clinical mobile video gait assessment application designed for physical therapy and rehabilitation in low-resource environments. Migrated 9,500+ lines to Kotlin Multiplatform (KMP). Uses MediaPipe 2D Pose tracking to extract 16 kinematic biomarkers across temporal, spatial, and smoothness (LDJ) domains, utilizing an ensemble Autoencoder + PCA + Ridge model achieving >0.97 AUC for impairment classification.
-            </div>
-            <div class="tag-cloud">
-              <span class="tech-pill">Kotlin Multiplatform</span>
-              <span class="tech-pill">Android Jetpack</span>
-              <span class="tech-pill">MediaPipe</span>
-              <span class="tech-pill">TensorFlow Lite</span>
-              <span class="tech-pill">AES-256</span>
-              <span class="tech-pill">Biomechanics</span>
-            </div>
-            <div class="action-links-row">
-              <a href="https://github.com/SrinivasaChivukula/GaitVision#readme" target="_blank" class="action-link primary"><i class="fa-solid fa-book-open"></i> App Documentation</a>
-              <a href="https://github.com/SrinivasaChivukula/GaitVision" target="_blank" class="action-link"><i class="fa-brands fa-github"></i> Repository</a>
-            </div>
-          </div>
-
-          <!-- 3. AegisCloud -->
-          <div class="story-card" data-category="systems">
-            <div class="card-header-row">
-              <span class="card-metric-badge badge-purple"><i class="fa-solid fa-shield-halved"></i> RTO 11.2m &bull; RPO 0.7m</span>
-              <span class="card-subtitle">2026 &bull; AWS Terraform IaC</span>
-            </div>
-            <a href="https://github.com/SrinivasaChivukula/AegisCloud" target="_blank" class="card-title-link">
-              AegisCloud &bull; Multi-Region AWS Automated Disaster Recovery <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
-            </a>
-            <div class="card-body">
-              Enterprise multi-region AWS disaster recovery infrastructure codified with 35 modular Terraform configurations. Deploys a 2-tier VPC spanning 3 AZs with dedicated NAT Gateways, Layer 7 ALB, and Aurora PostgreSQL cross-region replication (`us-east-1` $ightarrow$ `us-west-2`). Features automated Route 53 active-passive failover drills verified via custom Python orchestration engine (`aegis.py`).
-            </div>
-            <div class="tag-cloud">
-              <span class="tech-pill">Terraform</span>
-              <span class="tech-pill">AWS Multi-Region</span>
-              <span class="tech-pill">Aurora Global</span>
-              <span class="tech-pill">Route 53</span>
-              <span class="tech-pill">Security Hub</span>
-              <span class="tech-pill">Python CLI</span>
-            </div>
-            <div class="action-links-row">
-              <a href="https://github.com/SrinivasaChivukula/AegisCloud#readme" target="_blank" class="action-link primary"><i class="fa-solid fa-book-open"></i> Architecture Blueprint</a>
-              <a href="https://github.com/SrinivasaChivukula/AegisCloud" target="_blank" class="action-link"><i class="fa-brands fa-github"></i> Repository</a>
-            </div>
-          </div>
-
-          <!-- 4. CommerceStream-Azure -->
-          <div class="story-card" data-category="systems">
-            <div class="card-header-row">
-              <span class="card-metric-badge badge-emerald"><i class="fa-solid fa-gauge-high"></i> 7.5x Query Latency Reduction</span>
-              <span class="card-subtitle">2026 &bull; Azure Synapse Data Warehouse</span>
-            </div>
-            <a href="https://github.com/SrinivasaChivukula/CommerceStream-Azure" target="_blank" class="card-title-link">
-              CommerceStream-Azure &bull; Retail Analytical Data Warehouse <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
-            </a>
-            <div class="card-body">
-              Enterprise data warehouse architecture implementing Medallion design (Bronze Staging $ightarrow$ Silver 3NF Normalized $ightarrow$ Gold Star Schema). Implements clustered columnstore indexes on `dw.FactSales`, slashing complex analytical aggregation latency by 7.5x. Verified with 9 automated data quality test suites, Power BI semantic models, and cross-region failover automation.
-            </div>
-            <div class="tag-cloud">
-              <span class="tech-pill">Azure Synapse</span>
-              <span class="tech-pill">T-SQL Analytics</span>
-              <span class="tech-pill">Columnstore Indexes</span>
-              <span class="tech-pill">Power BI</span>
-              <span class="tech-pill">Star Schema</span>
-            </div>
-            <div class="action-links-row">
-              <a href="https://github.com/SrinivasaChivukula/CommerceStream-Azure#readme" target="_blank" class="action-link primary"><i class="fa-solid fa-database"></i> Warehouse Specs</a>
-              <a href="https://github.com/SrinivasaChivukula/CommerceStream-Azure" target="_blank" class="action-link"><i class="fa-brands fa-github"></i> Repository</a>
-            </div>
-          </div>
-
-          <!-- 5. SEC-RAG -->
-          <div class="story-card" data-category="systems">
-            <div class="card-header-row">
-              <span class="card-metric-badge badge-cyan"><i class="fa-solid fa-check"></i> 100% Native Go Tests Passed</span>
-              <span class="card-subtitle">2025 &bull; Go 1.26 Engine</span>
-            </div>
-            <a href="https://github.com/SrinivasaChivukula/sec-rag" target="_blank" class="card-title-link">
-              SEC-RAG &bull; Enterprise Financial Knowledge Intelligence <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
-            </a>
-            <div class="card-body">
-              High-performance Retrieval-Augmented Generation engine written in native Go 2025. Ingests, parses, and chunks unstructured SEC 10-K filings using a sliding-window algorithm. Features built-in deterministic hyper-spherical vector embedding, Pinecone vector indexing, and Claude 3.5 Sonnet orchestration to return strictly cited, verifiable markdown answers.
-            </div>
-            <div class="tag-cloud">
-              <span class="tech-pill">Go 1.26</span>
-              <span class="tech-pill">Pinecone</span>
-              <span class="tech-pill">Claude 3.5</span>
-              <span class="tech-pill">RAG Pipeline</span>
-              <span class="tech-pill">Vector Search</span>
-            </div>
-            <div class="action-links-row">
-              <a href="https://github.com/SrinivasaChivukula/sec-rag#readme" target="_blank" class="action-link primary"><i class="fa-solid fa-terminal"></i> Pipeline CLI Docs</a>
-              <a href="https://github.com/SrinivasaChivukula/sec-rag" target="_blank" class="action-link"><i class="fa-brands fa-github"></i> Repository</a>
-            </div>
-          </div>
-
-          <!-- 6. UNT Dining Planner -->
-          <div class="story-card" data-category="prod">
-            <div class="card-header-row">
-              <span class="card-metric-badge badge-amber"><i class="fa-solid fa-mobile-screen-button"></i> Live Expo Web Bundle</span>
-              <span class="card-subtitle">2026 &bull; React Native / Expo</span>
-            </div>
-            <a href="https://srinivasachivukula.github.io/Dining-App/" target="_blank" class="card-title-link">
-              UNT Dining Planner &bull; Nutrition & Meal Macro System <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
-            </a>
-            <div class="card-body">
-              Mobile application engineered in TypeScript and Expo SDK 51. Features real-time nutrition calculation across UNT dining halls, dynamic macro tracking (Protein, Carbs, Fat, Sodium), personalized dietary filtering (Vegan, Halal, Gluten-Free), and OLED dark mode theming. Compiled directly to React Native Web and hosted statically.
-            </div>
-            <div class="tag-cloud">
-              <span class="tech-pill">React Native</span>
-              <span class="tech-pill">Expo SDK 51</span>
-              <span class="tech-pill">TypeScript</span>
-              <span class="tech-pill">React Native Web</span>
-              <span class="tech-pill">Firebase</span>
-            </div>
-            <div class="action-links-row">
-              <a href="https://srinivasachivukula.github.io/Dining-App/" target="_blank" class="action-link primary"><i class="fa-solid fa-play"></i> Open Live Expo App</a>
-              <a href="https://github.com/SrinivasaChivukula/Dining-App" target="_blank" class="action-link"><i class="fa-brands fa-github"></i> Repository</a>
-            </div>
-          </div>
-
-          <!-- 7. JWK-Vault & Shield -->
-          <div class="story-card" data-category="systems">
-            <div class="card-header-row">
-              <span class="card-metric-badge badge-purple"><i class="fa-solid fa-key"></i> 4/4 Pytest Tests Passed</span>
-              <span class="card-subtitle">2026 &bull; Python Cryptography</span>
-            </div>
-            <a href="https://github.com/SrinivasaChivukula/JWK-Vault" target="_blank" class="card-title-link">
-              JWK-Vault & JWK-Shield &bull; RFC 7517 Cryptographic Auth Service <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
-            </a>
-            <div class="card-body">
-              RFC 7517 compliant JSON Web Key Server and verification proxy. Features automated SQLite key pair rotation, cryptographic expiry pruning, and stateless RS256 token issuance. Accompanied by JWK-Shield, a zero-trust proxy providing dynamic OIDC discovery caching and sliding-window rate limiting.
-            </div>
-            <div class="tag-cloud">
-              <span class="tech-pill">Python</span>
-              <span class="tech-pill">RS256 / RSA</span>
-              <span class="tech-pill">OIDC</span>
-              <span class="tech-pill">SQLite</span>
-              <span class="tech-pill">PyJWT</span>
-              <span class="tech-pill">Rate Limiting</span>
-            </div>
-            <div class="action-links-row">
-              <a href="https://github.com/SrinivasaChivukula/JWK-Vault#readme" target="_blank" class="action-link primary"><i class="fa-solid fa-book-open"></i> Vault API Specs</a>
-              <a href="https://github.com/SrinivasaChivukula/JWK-Shield#readme" target="_blank" class="action-link"><i class="fa-solid fa-shield-virus"></i> Shield Proxy Specs</a>
-            </div>
-          </div>
-
-          <!-- 8. Vital-Sign-Monitor -->
-          <div class="story-card" data-category="systems">
-            <div class="card-header-row">
-              <span class="card-metric-badge badge-emerald"><i class="fa-solid fa-trophy"></i> 1st Place HackWell Winner</span>
-              <span class="card-subtitle">Hackathon &bull; Edge IoT & CV</span>
-            </div>
-            <a href="https://github.com/SrinivasaChivukula/Vital-Sign-Monitor" target="_blank" class="card-title-link">
-              Vital-Sign-Monitor &bull; Edge Computer Vision Telemetry <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
-            </a>
-            <div class="card-body">
-              Edge computer vision system deployed on Raspberry Pi hardware to enhance patient safety through real-time state monitoring. Employs YOLOv8n object detection at low inference latency, a Python/Flask REST API, persistent SQLite event logging, and asynchronous audio alerts for critical patient falls.
-            </div>
-            <div class="tag-cloud">
-              <span class="tech-pill">YOLOv8</span>
-              <span class="tech-pill">OpenCV</span>
-              <span class="tech-pill">Flask</span>
-              <span class="tech-pill">Raspberry Pi</span>
-              <span class="tech-pill">SQLite</span>
-            </div>
-            <div class="action-links-row">
-              <a href="https://github.com/SrinivasaChivukula/Vital-Sign-Monitor#readme" target="_blank" class="action-link primary"><i class="fa-solid fa-heart-pulse"></i> Project Blueprint</a>
-              <a href="https://github.com/SrinivasaChivukula/Vital-Sign-Monitor" target="_blank" class="action-link"><i class="fa-brands fa-github"></i> Repository</a>
-            </div>
-          </div>
-
-          <!-- 9. Dynamic-Web-Essentials -->
-          <div class="story-card" data-category="prod">
-            <div class="card-header-row">
-              <span class="card-metric-badge badge-cyan"><i class="fa-solid fa-wand-magic-sparkles"></i> 60 FPS CSS Glassmorphism</span>
-              <span class="card-subtitle">Frontend Design System</span>
-            </div>
-            <a href="https://srinivasachivukula.github.io/Dynamic-Web-Essentials/" target="_blank" class="card-title-link">
-              Dynamic-Web-Essentials &bull; Modern UI Pattern Library <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
-            </a>
-            <div class="card-body">
-              Zero-dependency modern web component showcase built with pure vanilla HTML5 and CSS3. Demonstrates responsive grid ergonomics, animated SVG backdrop filters, and fluid micro-animations designed for maximum browser rendering efficiency.
-            </div>
-            <div class="tag-cloud">
-              <span class="tech-pill">HTML5</span>
-              <span class="tech-pill">CSS3</span>
-              <span class="tech-pill">Glassmorphism</span>
-              <span class="tech-pill">Vanilla JS</span>
-            </div>
-            <div class="action-links-row">
-              <a href="https://srinivasachivukula.github.io/Dynamic-Web-Essentials/" target="_blank" class="action-link primary"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Live Showcase</a>
-              <a href="https://github.com/SrinivasaChivukula/Dynamic-Web-Essentials" target="_blank" class="action-link"><i class="fa-brands fa-github"></i> Repository</a>
-            </div>
-          </div>
-
-          <!-- 10. AIML Portfolio (Colab) -->
-          <div class="story-card" data-category="colab">
-            <div class="card-header-row">
-              <span class="card-metric-badge badge-purple"><i class="fa-solid fa-flask"></i> Google Colab Executable</span>
-              <span class="card-subtitle">Machine Learning &bull; 3 Datasets</span>
-            </div>
-            <a href="https://colab.research.google.com/github/SrinivasaChivukula/AIML_Portfolio/blob/main/regression.ipynb" target="_blank" class="card-title-link">
-              Applied ML Model Zoo &bull; Regression, Classification & Clustering <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
-            </a>
-            <div class="card-body">
-              End-to-end machine learning pipelines on real datasets: multi-variable linear and polynomial regression on the Seoul Bike Sharing dataset, high-energy particle classification on the MAGIC Gamma Telescope dataset with RandomOverSampler, and unsupervised PCA / K-Means clustering on Wheat Seeds.
-            </div>
-            <div class="tag-cloud">
-              <span class="tech-pill">Scikit-Learn</span>
-              <span class="tech-pill">TensorFlow</span>
-              <span class="tech-pill">Imbalanced-Learn</span>
-              <span class="tech-pill">PCA</span>
-              <span class="tech-pill">K-Means</span>
-            </div>
-            <div class="action-links-row">
-              <a href="https://colab.research.google.com/github/SrinivasaChivukula/AIML_Portfolio/blob/main/regression.ipynb" target="_blank" class="action-link primary"><i class="fa-solid fa-rocket"></i> Run Regression (Colab)</a>
-              <a href="https://colab.research.google.com/github/SrinivasaChivukula/AIML_Portfolio/blob/main/example.ipynb" target="_blank" class="action-link"><i class="fa-solid fa-rocket"></i> Run Classifier (Colab)</a>
-              <a href="https://github.com/SrinivasaChivukula/AIML_Portfolio" target="_blank" class="action-link"><i class="fa-brands fa-github"></i> Repository</a>
-            </div>
-          </div>
-
-          <!-- 11. Loan Default Prediction (Colab) -->
-          <div class="story-card" data-category="colab">
-            <div class="card-header-row">
-              <span class="card-metric-badge badge-emerald"><i class="fa-solid fa-flask"></i> Google Colab Executable</span>
-              <span class="card-subtitle">FinTech ML &bull; SMOTE</span>
-            </div>
-            <a href="https://colab.research.google.com/github/SrinivasaChivukula/loan-default-prediction/blob/master/notebooks/loan_default_prediction.ipynb" target="_blank" class="card-title-link">
-              Loan Default Prediction &bull; Credit Risk Classifier <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
-            </a>
-            <div class="card-body">
-              Financial risk modeling pipeline addressing severe class imbalance using SMOTE oversampling. Integrates Scikit-Learn pipelines, XGBoost gradient boosting, and ROC-AUC optimization to accurately identify credit default risks.
-            </div>
-            <div class="tag-cloud">
-              <span class="tech-pill">SMOTE</span>
-              <span class="tech-pill">Scikit-Learn</span>
-              <span class="tech-pill">XGBoost</span>
-              <span class="tech-pill">ROC-AUC</span>
-            </div>
-            <div class="action-links-row">
-              <a href="https://colab.research.google.com/github/SrinivasaChivukula/loan-default-prediction/blob/master/notebooks/loan_default_prediction.ipynb" target="_blank" class="action-link primary"><i class="fa-solid fa-rocket"></i> Run in Colab</a>
-              <a href="https://github.com/SrinivasaChivukula/loan-default-prediction" target="_blank" class="action-link"><i class="fa-brands fa-github"></i> Repository</a>
-            </div>
-          </div>
-
-          <!-- 12. Genomic-Motif-Analyzer (Colab) -->
-          <div class="story-card" data-category="colab">
-            <div class="card-header-row">
-              <span class="card-metric-badge badge-cyan"><i class="fa-solid fa-dna"></i> 22k Sequences &bull; Colab</span>
-              <span class="card-subtitle">Bioinformatics &bull; PyTorch CNN</span>
-            </div>
-            <a href="https://colab.research.google.com/github/SrinivasaChivukula/Genomic-Motif-Analyzer/blob/main/motif_analysis.ipynb" target="_blank" class="card-title-link">
-              Genomic Motif Analyzer &bull; RNA Splice Junction Prediction <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
-            </a>
-            <div class="card-body">
-              Computational biology deep learning model trained on 22,000+ genomic sequences. Uses Position Weight Matrices (PWM) and 1D Convolutional Neural Networks to predict donor and acceptor splice junctions with high sensitivity.
-            </div>
-            <div class="tag-cloud">
-              <span class="tech-pill">PyTorch</span>
-              <span class="tech-pill">BioPython</span>
-              <span class="tech-pill">CNN</span>
-              <span class="tech-pill">Genomics</span>
-            </div>
-            <div class="action-links-row">
-              <a href="https://colab.research.google.com/github/SrinivasaChivukula/Genomic-Motif-Analyzer/blob/main/motif_analysis.ipynb" target="_blank" class="action-link primary"><i class="fa-solid fa-rocket"></i> Run in Colab</a>
-              <a href="https://github.com/SrinivasaChivukula/Genomic-Motif-Analyzer" target="_blank" class="action-link"><i class="fa-brands fa-github"></i> Repository</a>
-            </div>
-          </div>
-
-          <!-- 13. PyTorch Sentiment Embeddings (Colab) -->
-          <div class="story-card" data-category="colab">
-            <div class="card-header-row">
-              <span class="card-metric-badge badge-purple"><i class="fa-solid fa-flask"></i> Google Colab Executable</span>
-              <span class="card-subtitle">Deep NLP &bull; Word2Vec</span>
-            </div>
-            <a href="https://colab.research.google.com/github/SrinivasaChivukula/PyTorch-Sentiment-Embeddings/blob/main/learnable_embeddings.ipynb" target="_blank" class="card-title-link">
-              PyTorch Sentiment Embeddings &bull; Frozen vs Learnable Vectors <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
-            </a>
-            <div class="card-body">
-              Comparative natural language processing study in PyTorch analyzing the convergence speed, gradient flow, and generalization bounds of static frozen embeddings versus continuously backpropagated word representation matrices on 25,000 text samples.
-            </div>
-            <div class="tag-cloud">
-              <span class="tech-pill">PyTorch</span>
-              <span class="tech-pill">Embeddings</span>
-              <span class="tech-pill">NLP</span>
-              <span class="tech-pill">Deep Learning</span>
-            </div>
-            <div class="action-links-row">
-              <a href="https://colab.research.google.com/github/SrinivasaChivukula/PyTorch-Sentiment-Embeddings/blob/main/learnable_embeddings.ipynb" target="_blank" class="action-link primary"><i class="fa-solid fa-rocket"></i> Run in Colab</a>
-              <a href="https://github.com/SrinivasaChivukula/PyTorch-Sentiment-Embeddings" target="_blank" class="action-link"><i class="fa-brands fa-github"></i> Repository</a>
-            </div>
-          </div>
-
+        <div class="archive-search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="archiveSearch" placeholder="Search systems by title, language, framework, or technology..." onkeyup="searchArchive()" />
         </div>
-      </section>
 
-      <!-- HONORS & CERTIFICATIONS SECTION -->
-      <section id="honors">
-        <h2 class="section-heading">Certifications & Honors</h2>
-        <div class="card-list">
-
-          <div class="story-card">
-            <div class="card-header-row">
-              <span class="card-metric-badge badge-emerald">NSA / DHS Accredited</span>
-              <span class="card-subtitle">National Certification</span>
-            </div>
-            <h3 style="font-size: 1.1rem; font-weight: 700; color: #fff;">Center of Academic Excellence in Cyber Defense (CAE-CD)</h3>
-            <div class="card-body">
-              Accredited by the National Security Agency (NSA) and Department of Homeland Security (DHS) for demonstrated excellence across rigorous cybersecurity, network defense, threat analysis, and cryptographic systems criteria.
-            </div>
-          </div>
-
-          <div class="story-card">
-            <div class="card-header-row">
-              <span class="card-metric-badge badge-cyan">Academic Certificate</span>
-              <span class="card-subtitle">University of North Texas</span>
-            </div>
-            <h3 style="font-size: 1.1rem; font-weight: 700; color: #fff;">Academic Certificate in Artificial Intelligence & Machine Learning</h3>
-            <div class="card-body">
-              Awarded for comprehensive mastery across deep neural architectures, linear algebra, multivariable optimization, statistical learning theory, and computer vision pipelines.
-            </div>
-          </div>
-
-          <div class="story-card">
-            <div class="card-header-row">
-              <span class="card-metric-badge badge-amber">1st Place Hackathon Winner</span>
-              <span class="card-subtitle">HackWell 2024</span>
-            </div>
-            <h3 style="font-size: 1.1rem; font-weight: 700; color: #fff;">1st Place Champion &bull; Vision Assist Edge IoT System</h3>
-            <div class="card-body">
-              Awarded First Place out of dozens of competitive collegiate engineering teams for architecting a low-latency Raspberry Pi + YOLOv8 computer vision system providing assistive telemetry for hospital patients.
-            </div>
-          </div>
-
-          <div class="story-card">
-            <div class="card-header-row">
-              <span class="card-metric-badge badge-purple">Academic Distinction</span>
-              <span class="card-subtitle">Every Semester (2022 &mdash; Present)</span>
-            </div>
-            <h3 style="font-size: 1.1rem; font-weight: 700; color: #fff;">President's Honor Roll & UNT Excellence Scholar</h3>
-            <div class="card-body">
-              Sustained 4.0/4.0 grade point average across upper-division Computer Science coursework including Distributed Systems, Cloud Computing, Database Security, and Analysis of Algorithms.
-            </div>
-          </div>
-
+        <div class="table-container">
+          <table class="archive-table">
+            <thead>
+              <tr>
+                <th>Year</th>
+                <th>System / Project</th>
+                <th>Category</th>
+                <th>Built With</th>
+                <th>Verified Deliverable</th>
+              </tr>
+            </thead>
+            <tbody id="archiveTableBody">
+              <!-- cf_ai_mentor -->
+              <tr data-cat="web ai">
+                <td>2026</td>
+                <td class="project-name-cell"><strong>cf_ai_mentor</strong> <span class="badge-kind">Live</span></td>
+                <td>Web & Edge AI</td>
+                <td>Cloudflare Workers, React 18, D1 SQLite, Workers AI</td>
+                <td><a href="https://cf-ai-mentor.dev" target="_blank" class="link-live"><i class="fa-solid fa-arrow-up-right-from-square"></i> cf-ai-mentor.dev ↗</a></td>
+              </tr>
+              <!-- Dining-App -->
+              <tr data-cat="web">
+                <td>2025</td>
+                <td class="project-name-cell"><strong>Dining-App</strong> <span class="badge-kind">Live</span></td>
+                <td>Mobile & Web</td>
+                <td>React Native, Expo Web, TypeScript, Metro</td>
+                <td><a href="https://srinivasachivukula.github.io/Dining-App/" target="_blank" class="link-live"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Expo Web ↗</a></td>
+              </tr>
+              <!-- Dynamic-Web-Essentials -->
+              <tr data-cat="web">
+                <td>2024</td>
+                <td class="project-name-cell"><strong>Dynamic-Web-Essentials</strong> <span class="badge-kind">Live</span></td>
+                <td>Design System</td>
+                <td>Vanilla CSS, Glassmorphism, Micro-Interactions</td>
+                <td><a href="https://srinivasachivukula.github.io/Dynamic-Web-Essentials/" target="_blank" class="link-live"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live CSS System ↗</a></td>
+              </tr>
+              <!-- sec-rag -->
+              <tr data-cat="systems ai">
+                <td>2026</td>
+                <td class="project-name-cell"><strong>sec-rag</strong></td>
+                <td>Systems & AI</td>
+                <td>Go 1.22, Vector Indexing, SIMD Cosine, CVE Feeds</td>
+                <td><a href="https://github.com/srinivasachivukula/sec-rag" target="_blank" class="link-code"><i class="fa-brands fa-github"></i> Repository ↗</a></td>
+              </tr>
+              <!-- AegisCloud -->
+              <tr data-cat="cloud systems">
+                <td>2025</td>
+                <td class="project-name-cell"><strong>AegisCloud</strong></td>
+                <td>Cloud & Infra</td>
+                <td>AWS Multi-Region, Terraform, Route 53, Aurora Multi-AZ</td>
+                <td><a href="https://github.com/srinivasachivukula/AegisCloud" target="_blank" class="link-code"><i class="fa-brands fa-github"></i> Repository ↗</a></td>
+              </tr>
+              <!-- CommerceStream-Azure -->
+              <tr data-cat="cloud systems">
+                <td>2025</td>
+                <td class="project-name-cell"><strong>CommerceStream-Azure</strong></td>
+                <td>Cloud & Data</td>
+                <td>Azure Synapse, Event Hubs, Stream Analytics, SQL DW</td>
+                <td><a href="https://github.com/srinivasachivukula/CommerceStream-Azure" target="_blank" class="link-code"><i class="fa-brands fa-github"></i> Repository ↗</a></td>
+              </tr>
+              <!-- JWK-Vault -->
+              <tr data-cat="systems">
+                <td>2025</td>
+                <td class="project-name-cell"><strong>JWK-Vault</strong></td>
+                <td>Cryptography</td>
+                <td>Python 3.12, RSA-256 Key Management, RFC 7517</td>
+                <td><a href="https://github.com/srinivasachivukula/JWK-Vault" target="_blank" class="link-code"><i class="fa-brands fa-github"></i> Repository ↗</a></td>
+              </tr>
+              <!-- JWK-Shield -->
+              <tr data-cat="systems">
+                <td>2025</td>
+                <td class="project-name-cell"><strong>JWK-Shield</strong></td>
+                <td>Security & Auth</td>
+                <td>Python, JWT Token Validation, Rate Limiting, Pytest</td>
+                <td><a href="https://github.com/srinivasachivukula/JWK-Shield" target="_blank" class="link-code"><i class="fa-brands fa-github"></i> Repository ↗</a></td>
+              </tr>
+              <!-- AIML_Portfolio -->
+              <tr data-cat="ai">
+                <td>2025</td>
+                <td class="project-name-cell"><strong>AIML_Portfolio (Genomic Splicing)</strong> <span class="badge-kind">Colab</span></td>
+                <td>Genomic AI</td>
+                <td>PyTorch, 1D-CNN, Bio-Sequence Feature Extraction</td>
+                <td><a href="https://colab.research.google.com/github/srinivasachivukula/AIML_Portfolio/blob/main/Splice_Junction_Gene_Classification/notebooks/splice_junction_classification.ipynb" target="_blank" class="link-colab"><i class="fa-solid fa-play"></i> Run in Colab ↗</a></td>
+              </tr>
+              <!-- Predictive-Health-Analytics -->
+              <tr data-cat="ai">
+                <td>2024</td>
+                <td class="project-name-cell"><strong>Predictive-Health-Analytics</strong> <span class="badge-kind">Colab</span></td>
+                <td>Machine Learning</td>
+                <td>XGBoost, Random Forest, SHAP Explanations, Scikit-Learn</td>
+                <td><a href="https://colab.research.google.com/github/srinivasachivukula/Predictive-Health-Analytics/blob/main/Predictive_Health_Analytics.ipynb" target="_blank" class="link-colab"><i class="fa-solid fa-play"></i> Run in Colab ↗</a></td>
+              </tr>
+              <!-- Loan-Risk-Analysis -->
+              <tr data-cat="ai">
+                <td>2024</td>
+                <td class="project-name-cell"><strong>Loan-Risk-Analysis</strong> <span class="badge-kind">Colab</span></td>
+                <td>FinTech & ML</td>
+                <td>Credit Default Modeling, Logistic Regression, ROC-AUC</td>
+                <td><a href="https://colab.research.google.com/github/srinivasachivukula/Loan-Risk-Analysis/blob/main/Loan_Risk_Analysis.ipynb" target="_blank" class="link-colab"><i class="fa-solid fa-play"></i> Run in Colab ↗</a></td>
+              </tr>
+              <!-- Global-Mobility-Analytics -->
+              <tr data-cat="ai">
+                <td>2024</td>
+                <td class="project-name-cell"><strong>Global-Mobility-Analytics</strong> <span class="badge-kind">Colab</span></td>
+                <td>Data Science</td>
+                <td>Pandas, NumPy, Spatial-Temporal Analysis, Seaborn</td>
+                <td><a href="https://colab.research.google.com/github/srinivasachivukula/Global-Mobility-Analytics/blob/main/Global_Mobility_Analytics.ipynb" target="_blank" class="link-colab"><i class="fa-solid fa-play"></i> Run in Colab ↗</a></td>
+              </tr>
+              <!-- Predictive-Sales-Analytics -->
+              <tr data-cat="ai">
+                <td>2024</td>
+                <td class="project-name-cell"><strong>Predictive-Sales-Analytics</strong> <span class="badge-kind">Colab</span></td>
+                <td>Data Science</td>
+                <td>Time Series Forecasting, ARIMA, Prophet, Regression</td>
+                <td><a href="https://colab.research.google.com/github/srinivasachivukula/Predictive-Sales-Analytics/blob/main/Predictive_Sales_Analytics.ipynb" target="_blank" class="link-colab"><i class="fa-solid fa-play"></i> Run in Colab ↗</a></td>
+              </tr>
+              <!-- N-Gram-Language-Model -->
+              <tr data-cat="ai">
+                <td>2024</td>
+                <td class="project-name-cell"><strong>N-Gram-Language-Model</strong> <span class="badge-kind">Colab</span></td>
+                <td>NLP</td>
+                <td>Statistical NLP, N-gram Tokenization, Perplexity Scoring</td>
+                <td><a href="https://colab.research.google.com/github/srinivasachivukula/N-Gram-Language-Model/blob/main/N_Gram_Language_Model.ipynb" target="_blank" class="link-colab"><i class="fa-solid fa-play"></i> Run in Colab ↗</a></td>
+              </tr>
+              <!-- Search-And-Rescue-Planning -->
+              <tr data-cat="ai systems">
+                <td>2024</td>
+                <td class="project-name-cell"><strong>Search-And-Rescue-Planning</strong> <span class="badge-kind">Colab</span></td>
+                <td>Algorithms & AI</td>
+                <td>A* Search, Dijkstra, Heuristic Grid Navigation, Graph Theory</td>
+                <td><a href="https://colab.research.google.com/github/srinivasachivukula/Search-And-Rescue-Planning/blob/main/Search_And_Rescue_Planning.ipynb" target="_blank" class="link-colab"><i class="fa-solid fa-play"></i> Run in Colab ↗</a></td>
+              </tr>
+              <!-- Weather-Explorer-MCP -->
+              <tr data-cat="systems cloud">
+                <td>2025</td>
+                <td class="project-name-cell"><strong>Weather-Explorer-MCP</strong></td>
+                <td>AI Tooling</td>
+                <td>Model Context Protocol (MCP), Node.js, Claude Tools</td>
+                <td><a href="https://github.com/srinivasachivukula/Weather-Explorer-MCP" target="_blank" class="link-code"><i class="fa-brands fa-github"></i> Repository ↗</a></td>
+              </tr>
+              <!-- Dreamscape-Composer -->
+              <tr data-cat="systems">
+                <td>2024</td>
+                <td class="project-name-cell"><strong>Dreamscape-Composer</strong></td>
+                <td>Creative Audio</td>
+                <td>Python, Algorithmic Sound Synthesis, MIDI Processing</td>
+                <td><a href="https://github.com/srinivasachivukula/Dreamscape-Composer" target="_blank" class="link-code"><i class="fa-brands fa-github"></i> Repository ↗</a></td>
+              </tr>
+              <!-- GaitVision -->
+              <tr data-cat="ai systems">
+                <td>2024</td>
+                <td class="project-name-cell"><strong>GaitVision</strong></td>
+                <td>Computer Vision</td>
+                <td>Android, Kotlin, MediaPipe Pose Estimation, Biomechanics</td>
+                <td><a href="https://github.com/srinivasachivukula/GaitVision" target="_blank" class="link-code"><i class="fa-brands fa-github"></i> Repository ↗</a></td>
+              </tr>
+              <!-- Multi-Platform-Service-Architecture -->
+              <tr data-cat="systems">
+                <td>2024</td>
+                <td class="project-name-cell"><strong>Multi-Platform-Service-Architecture</strong></td>
+                <td>Mobile Systems</td>
+                <td>Android Native, IPC Services, Foreground Daemon, Kotlin</td>
+                <td><a href="https://github.com/srinivasachivukula/Multi-Platform-Service-Architecture" target="_blank" class="link-code"><i class="fa-brands fa-github"></i> Repository ↗</a></td>
+              </tr>
+              <!-- Srinivasa-s-Portfolio -->
+              <tr data-cat="web">
+                <td>2026</td>
+                <td class="project-name-cell"><strong>Srinivasa-s-Portfolio</strong></td>
+                <td>Web Engineering</td>
+                <td>Semantic HTML5, Responsive CSS3, GitHub Pages</td>
+                <td><a href="https://github.com/srinivasachivukula/Srinivasa-s-Portfolio" target="_blank" class="link-code"><i class="fa-brands fa-github"></i> Repository ↗</a></td>
+              </tr>
+              <!-- srinivasachivukula (Profile) -->
+              <tr data-cat="systems">
+                <td>2026</td>
+                <td class="project-name-cell"><strong>srinivasachivukula (GitHub Profile)</strong></td>
+                <td>Developer Brand</td>
+                <td>Markdown, GitHub Actions, Dynamic Status Readme</td>
+                <td><a href="https://github.com/srinivasachivukula/srinivasachivukula" target="_blank" class="link-code"><i class="fa-brands fa-github"></i> Repository ↗</a></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- SKILLS MATRIX SECTION -->
-      <section id="skills">
-        <h2 class="section-heading">Technical Skills Matrix</h2>
-        <div class="skills-matrix">
+    <!-- Chapter 5: Education, Honors & Certifications -->
+    <section class="credentials">
+      <div class="container">
+        <div class="chapter-tag">Chapter 05 &bull; Academic Background</div>
+        <h2 class="chapter-title" style="margin-bottom: 12px;">Education & Distinctions.</h2>
 
-          <div class="skill-category">
-            <div class="skill-cat-title"><i class="fa-solid fa-code"></i> Core Languages</div>
-            <div class="skill-tags">
-              <span class="skill-badge">Python</span>
-              <span class="skill-badge">TypeScript</span>
-              <span class="skill-badge">JavaScript</span>
-              <span class="skill-badge">Go 1.26</span>
-              <span class="skill-badge">Kotlin (KMP)</span>
-              <span class="skill-badge">SQL (T-SQL/Postgres)</span>
-              <span class="skill-badge">C / C++</span>
-              <span class="skill-badge">Bash</span>
-            </div>
+        <div class="credentials-grid">
+          <div class="credential-card">
+            <h3>B.S. in Computer Science</h3>
+            <div class="credential-school">University of North Texas &bull; Minor in Mathematics</div>
+            <p class="credential-desc">
+              <strong>Cumulative GPA: 4.0 / 4.0</strong> (Dec 2026). Dean's List every semester. 
+              Core coursework in Distributed Systems, Operating Systems, Algorithm Analysis, Data Structures, 
+              Database Systems, Computer Networks, and Cryptography.
+            </p>
           </div>
 
-          <div class="skill-category">
-            <div class="skill-cat-title"><i class="fa-solid fa-brain"></i> AI & Machine Learning</div>
-            <div class="skill-tags">
-              <span class="skill-badge">PyTorch</span>
-              <span class="skill-badge">TensorFlow / Keras</span>
-              <span class="skill-badge">Scikit-Learn</span>
-              <span class="skill-badge">MediaPipe</span>
-              <span class="skill-badge">OpenCV / YOLOv8</span>
-              <span class="skill-badge">Pinecone</span>
-              <span class="skill-badge">Hugging Face</span>
-              <span class="skill-badge">Cloudflare Workers AI</span>
-            </div>
+          <div class="credential-card">
+            <h3>Honors & Academic Certifications</h3>
+            <div class="credential-school">National & Institutional Recognition</div>
+            <p class="credential-desc">
+              &bull; <strong>1st Place Winner</strong> &mdash; HackWell 2024 Hackathon<br />
+              &bull; <strong>NSA / DHS CAE-CD</strong> Cyber Defense Certificate<br />
+              &bull; <strong>AI & Machine Learning</strong> Academic Certificate<br />
+              &bull; <strong>UR2PHD Fellow</strong> &mdash; Computing Research Association
+            </p>
           </div>
-
-          <div class="skill-category">
-            <div class="skill-cat-title"><i class="fa-solid fa-cloud"></i> Cloud, DevOps & IaC</div>
-            <div class="skill-tags">
-              <span class="skill-badge">Terraform</span>
-              <span class="skill-badge">AWS (ALB/ASG/Aurora/R53)</span>
-              <span class="skill-badge">Azure Synapse / ADF</span>
-              <span class="skill-badge">Cloudflare Workers</span>
-              <span class="skill-badge">Docker</span>
-              <span class="skill-badge">GitHub Actions CI/CD</span>
-              <span class="skill-badge">Kubernetes</span>
-            </div>
-          </div>
-
-          <div class="skill-category">
-            <div class="skill-cat-title"><i class="fa-solid fa-shield-halved"></i> Security & Cryptography</div>
-            <div class="skill-tags">
-              <span class="skill-badge">OIDC & JWKS (RFC 7517)</span>
-              <span class="skill-badge">RS256 Cryptography</span>
-              <span class="skill-badge">Rapid7 & CrowdStrike</span>
-              <span class="skill-badge">Active Directory IAM</span>
-              <span class="skill-badge">SAST / DAST Pipelines</span>
-              <span class="skill-badge">Zero-Trust Architecture</span>
-              <span class="skill-badge">AES-256 / Argon2</span>
-            </div>
-          </div>
-
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- FOOTER -->
-      <footer style="padding-top: 40px; border-top: 1px solid var(--border); font-size: 0.85rem; color: var(--text-sub);">
+    <!-- Chapter 6: Contact & Inquiries (Julian Ozen Style) -->
+    <section class="contact-section" id="contact">
+      <div class="container contact-container">
+        <div class="chapter-tag">Chapter 06 &bull; Inquiries</div>
+        <h2>Let's build something enduring.</h2>
         <p>
-          Engineered with precision by <b>Srinivasa Chivukula</b> &bull; Built with pure HTML5, CSS Grid, and vanilla JavaScript &bull; Hosted on GitHub Pages.
+          I'm actively seeking Software Engineering, Distributed Systems, and AI Research opportunities for Summer 2026. 
+          If you have an ambitious problem to solve, feel free to reach out.
         </p>
-      </footer>
 
-    </main>
-  </div>
+        <div>
+          <button class="email-copy-pill" onclick="copyEmail()">
+            <i class="fa-regular fa-envelope"></i>
+            <span id="emailText">srinivasachivukula1@gmail.com</span>
+            <i class="fa-regular fa-copy" id="copyIcon" style="color: var(--text-muted);"></i>
+          </button>
+        </div>
+
+        <div class="social-row">
+          <a href="mailto:srinivasachivukula1@gmail.com" class="social-link">
+            <i class="fa-solid fa-paper-plane"></i> Email
+          </a>
+          <a href="https://linkedin.com/in/srinivasa-chivukula" target="_blank" rel="noopener noreferrer" class="social-link">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://github.com/srinivasachivukula" target="_blank" rel="noopener noreferrer" class="social-link">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+          <a href="Srinivasa_Chivukula_Resume.pdf" target="_blank" class="social-link">
+            <i class="fa-solid fa-file-pdf"></i> Resume PDF
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Designed & Engineered by Srinivasa Chivukula &bull; 2026. Built with semantic craftsmanship.</p>
+    </div>
+  </footer>
 
   <script>
-    // Spotlight effect following mouse cursor
-    const spotlight = document.getElementById('spotlight');
-    window.addEventListener('mousemove', (e) => {
-      document.body.style.setProperty('--mouse-x', e.clientX + 'px');
-      document.body.style.setProperty('--mouse-y', e.clientY + 'px');
-    });
+    function copyEmail() {
+      const email = 'srinivasachivukula1@gmail.com';
+      navigator.clipboard.writeText(email).then(() => {
+        const text = document.getElementById('emailText');
+        const icon = document.getElementById('copyIcon');
+        text.innerText = 'Copied to clipboard!';
+        icon.className = 'fa-solid fa-check';
+        icon.style.color = '#10b981';
+        setTimeout(() => {
+          text.innerText = email;
+          icon.className = 'fa-regular fa-copy';
+          icon.style.color = 'var(--text-muted)';
+        }, 2200);
+      });
+    }
 
-    // Auto-scroll spy highlighting active section in sidebar
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-link');
+    function filterArchive(cat) {
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const id = entry.target.getAttribute('id');
-          navLinks.forEach(link => {
-            link.classList.toggle('active', link.getAttribute('href') === '#' + id);
-          });
+      const rows = document.querySelectorAll('#archiveTableBody tr');
+      rows.forEach(row => {
+        const itemCats = row.getAttribute('data-cat') || '';
+        if (cat === 'all' || itemCats.includes(cat)) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
         }
       });
-    }, { threshold: 0.35 });
+    }
 
-    sections.forEach(section => observer.observe(section));
-
-    // Interactive project filter
-    function filterProjects(category, btn) {
-      document.querySelectorAll('.p-filter-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const cards = document.querySelectorAll('#projectCardList .story-card');
-      cards.forEach(card => {
-        const cats = card.getAttribute('data-category') || '';
-        if (category === 'all' || cats.includes(category)) {
-          card.style.display = 'flex';
+    function searchArchive() {
+      const query = document.getElementById('archiveSearch').value.toLowerCase();
+      const rows = document.querySelectorAll('#archiveTableBody tr');
+      rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        if (text.includes(query)) {
+          row.style.display = '';
         } else {
-          card.style.display = 'none';
+          row.style.display = 'none';
         }
       });
     }
