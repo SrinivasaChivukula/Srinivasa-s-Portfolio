@@ -4,19 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Srinivasa Chivukula — Software Engineer & AI Systems Researcher</title>
-  <meta name="description" content="Portfolio of Srinivasa Chivukula, Software Engineer and AI Systems Researcher at the University of North Texas (4.0 GPA). Specializing in genomic deep learning, cloud security, and distributed systems." />
+  <meta name="description" content="Portfolio of Srinivasa Chivukula, Software Engineer and AI Systems Researcher at the University of North Texas (Straight 4.0 GPA). Specializing in genomic deep learning, cloud security, and distributed systems." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500;1,6..72,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <style>
     :root {
       --bg: #0c0d10;
-      --bg-surface: #141519;
-      --bg-elevated: #1a1c22;
+      --bg-surface: #13151b;
+      --bg-elevated: #1a1d26;
       --border: rgba(255, 255, 255, 0.08);
-      --border-hover: rgba(255, 255, 255, 0.2);
+      --border-hover: rgba(255, 255, 255, 0.22);
       --text-primary: #ffffff;
       --text-secondary: #9ca3af;
       --text-muted: #6b7280;
@@ -48,7 +48,6 @@
       transition: color 0.2s ease, opacity 0.2s ease;
     }
 
-    /* Container */
     .container {
       max-width: 960px;
       margin: 0 auto;
@@ -60,17 +59,16 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(12, 13, 16, 0.85);
+      background: rgba(12, 13, 16, 0.88);
       backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
-      transition: border-color 0.2s ease;
     }
 
     .header-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 0;
+      padding: 18px 0;
     }
 
     .brand {
@@ -93,7 +91,7 @@
 
     .status-pill {
       font-size: 0.75rem;
-      font-weight: 500;
+      font-weight: 600;
       color: var(--text-secondary);
       background: rgba(255, 255, 255, 0.05);
       padding: 3px 10px;
@@ -137,7 +135,7 @@
 
     /* Hero Section (Julian Ozen Inspired) */
     section.hero {
-      padding: 90px 0 70px;
+      padding: 96px 0 64px;
     }
 
     .hero-eyebrow {
@@ -155,7 +153,7 @@
     }
 
     h1.hero-heading {
-      font-size: 3.8rem;
+      font-size: 4rem;
       font-weight: 800;
       letter-spacing: -0.04em;
       line-height: 1.08;
@@ -167,7 +165,7 @@
       font-size: 1.25rem;
       color: var(--text-secondary);
       line-height: 1.7;
-      max-width: 740px;
+      max-width: 760px;
       margin-bottom: 36px;
     }
     p.hero-body strong {
@@ -388,7 +386,6 @@
       letter-spacing: 0.04em;
     }
 
-    /* Interactive Pipeline Graph (Pure SVG) */
     .pipeline-diagram {
       width: 100%;
       height: auto;
@@ -504,7 +501,7 @@
       transform: translateY(-1px);
     }
 
-    /* Archive Table (All 21 Engineering Deliverables) */
+    /* Archive Table */
     section.archive-section {
       padding: 90px 0 60px;
     }
@@ -575,7 +572,6 @@
       font-size: 0.9rem;
     }
 
-    /* Clean Archive Table */
     .table-container {
       width: 100%;
       overflow-x: auto;
@@ -654,7 +650,7 @@
       gap: 4px;
     }
 
-    /* Education & Credentials */
+    /* Credentials */
     section.credentials {
       padding: 80px 0 60px;
       border-bottom: 1px solid var(--border);
@@ -691,7 +687,7 @@
       line-height: 1.6;
     }
 
-    /* Inquiries & Contact Section */
+    /* Contact Section */
     section.contact-section {
       padding: 90px 0 100px;
       text-align: center;
@@ -752,7 +748,6 @@
       color: var(--text-primary);
     }
 
-    /* Minimalist Footer */
     footer.site-footer {
       padding: 40px 0;
       border-top: 1px solid var(--border);
@@ -761,7 +756,6 @@
       color: var(--text-muted);
     }
 
-    /* Responsive */
     @media (max-width: 860px) {
       h1.hero-heading { font-size: 2.8rem; }
       .story-split, .story-split.reverse {
@@ -786,7 +780,7 @@
 </head>
 
 <body>
-  <!-- Header -->
+  <!-- Minimalist Sticky Header -->
   <header class="site-header">
     <div class="container header-inner">
       <a href="#top" class="brand">
@@ -802,14 +796,14 @@
         <a href="#archive">Archive (21)</a>
         <a href="#contact">Contact</a>
         <a href="Srinivasa_Chivukula_Resume.pdf" target="_blank" class="btn-header-resume">
-          <i class="fa-solid fa-file-pdf"></i> Resume
+          <i class="fa-solid fa-file-pdf"></i> Resume PDF
         </a>
       </nav>
     </div>
   </header>
 
   <main id="top">
-    <!-- Hero Section (Julian Ozen Inspired) -->
+    <!-- Hero Section (Julian Ozen Style) -->
     <section class="hero">
       <div class="container">
         <div class="hero-eyebrow">
@@ -826,16 +820,16 @@
         </p>
 
         <div class="hero-actions">
-          <a href="mailto:srinivasachivukula1@gmail.com" class="pill-button pill-primary">
+          <a href="mailto:srinivasachivukula@outlook.com" class="pill-button pill-primary">
             <i class="fa-regular fa-envelope"></i> Contact Me
           </a>
           <a href="Srinivasa_Chivukula_Resume.pdf" target="_blank" class="pill-button pill-secondary">
             <i class="fa-solid fa-arrow-down"></i> View Resume PDF
           </a>
-          <a href="https://github.com/srinivasachivukula" target="_blank" rel="noopener noreferrer" class="pill-button pill-secondary">
+          <a href="https://github.com/SrinivasaChivukula" target="_blank" rel="noopener noreferrer" class="pill-button pill-secondary">
             <i class="fa-brands fa-github"></i> GitHub
           </a>
-          <a href="https://linkedin.com/in/srinivasa-chivukula" target="_blank" rel="noopener noreferrer" class="pill-button pill-secondary">
+          <a href="https://linkedin.com/in/srinivasasaidattac" target="_blank" rel="noopener noreferrer" class="pill-button pill-secondary">
             <i class="fa-brands fa-linkedin"></i> LinkedIn
           </a>
         </div>
@@ -870,30 +864,30 @@
 
         <div class="story-split">
           <div class="story-content">
-            <h3>Deep Learning for Genomic RNA Splicing <em>2024 – Present</em></h3>
+            <h3>Deep Learning for Genomic RNA Splicing <em>2025 – Present</em></h3>
             <p>
-              As an Undergraduate Research Assistant with the <strong>Oluwadare Computational Biology & AI Lab</strong> and <strong>UR2PHD</strong>, 
-              I design deep convolutional neural network pipelines predicting RNA splice-junction anomalies across <strong>22,000+ biological sequences</strong>.
+              Selected for the competitive <strong>UR2PHD research program</strong> and mentored by a PhD researcher in UNT's 
+              <strong>Oluwadare Computational Biology & AI Lab</strong>, contributing to a deep-learning splice-site prediction system for genomic RNA sequences.
             </p>
             <p>
-              Splicing mutations are primary drivers of congenital genetic disorders and oncology. Our architecture maps 1D sequence encodings through residual convolutional layers 
-              distinguishing donor, acceptor, and non-splice sites, achieving <strong>&gt;0.97 ROC-AUC</strong>. To ensure reproducible science, I packaged all pipelines into 
-              containerized Docker environments with automated evaluation suites.
+              Engineered Convolutional Neural Networks (CNNs) in Python with TensorFlow, Keras, and PyTorch to classify donor (GT) and acceptor (AG) 
+              splice sites from one-hot-encoded nucleotide sequences across <strong>22,000+ sequences</strong>, yielding <strong>&gt;0.97 ROC-AUC</strong>. 
+              Built data pipelines with NumPy/Pandas and containerized training/inference with Docker for reproducible laboratory benchmarks.
             </p>
 
             <div class="story-pills">
               <span class="tech-tag">PyTorch</span>
+              <span class="tech-tag">TensorFlow</span>
               <span class="tech-tag">Docker</span>
               <span class="tech-tag">Genomic AI</span>
-              <span class="tech-tag">Bioinformatics</span>
               <span class="tech-tag">UR2PHD Fellow</span>
             </div>
 
             <div class="story-links">
-              <a href="https://colab.research.google.com/github/srinivasachivukula/AIML_Portfolio/blob/main/Splice_Junction_Gene_Classification/notebooks/splice_junction_classification.ipynb" target="_blank" class="btn-deliverable live">
+              <a href="https://colab.research.google.com/github/SrinivasaChivukula/AIML_Portfolio/blob/main/Splice_Junction_Gene_Classification/notebooks/splice_junction_classification.ipynb" target="_blank" class="btn-deliverable live">
                 <i class="fa-solid fa-play"></i> Open in Google Colab ↗
               </a>
-              <a href="https://github.com/srinivasachivukula/AIML_Portfolio" target="_blank" class="btn-deliverable repo">
+              <a href="https://github.com/SrinivasaChivukula/AIML_Portfolio" target="_blank" class="btn-deliverable repo">
                 <i class="fa-brands fa-github"></i> Research Codebase ↗
               </a>
             </div>
@@ -946,28 +940,30 @@
           <div class="story-content">
             <h3>Enterprise Vulnerability & EDR Operations <em>2024 – Present</em></h3>
             <p>
-              As an <strong>IT Security Specialist</strong> at the University of North Texas, I protect over 1,000 critical administrative, 
-              academic, and research systems from active cyber threats, unauthorized intrusion, and software vulnerabilities.
+              As an <strong>IT Security Assistant</strong> across 7 colleges at the University of North Texas, 
+              I secure IT assets using <strong>Rapid7 InsightVM</strong>, <strong>CrowdStrike Falcon EDR</strong>, and <strong>Microsoft Azure</strong>, 
+              ensuring endpoint compliance and continuous monitoring across 1,000+ endpoints.
             </p>
             <p>
-              I engineered automated telemetry workflows utilizing <strong>Rapid7 InsightVM</strong> and <strong>CrowdStrike Falcon EDR</strong>. 
-              By developing automated PowerShell remediation scripts and Active Directory Group Policy enforcement pipelines, 
-              we accelerated vulnerability remediation SLA response times by <strong>40%</strong>. Certified in Cyber Defense by the <strong>NSA / DHS CAE-CD</strong> program.
+              Administer identity and access management through Active Directory under a strict least-privilege model. 
+              Engineered automated remediation scripts in Python and PowerShell, 
+              <strong>accelerating patch deployment by 40%</strong> and dramatically reducing exposure windows on critical endpoints. 
+              Awarded the <strong>NSA / DHS CAE-CD</strong> Cyber Defense Certificate.
             </p>
 
             <div class="story-pills">
               <span class="tech-tag">CrowdStrike Falcon</span>
               <span class="tech-tag">Rapid7 InsightVM</span>
               <span class="tech-tag">Active Directory</span>
-              <span class="tech-tag">PowerShell Automation</span>
+              <span class="tech-tag">Python & PowerShell</span>
               <span class="tech-tag">NSA CAE-CD</span>
             </div>
 
             <div class="story-links">
-              <a href="https://github.com/srinivasachivukula/AegisCloud" target="_blank" class="btn-deliverable repo">
-                <i class="fa-solid fa-shield-halved"></i> Cloud Security Architecture ↗
+              <a href="https://github.com/SrinivasaChivukula/AegisCloud" target="_blank" class="btn-deliverable repo">
+                <i class="fa-solid fa-shield-halved"></i> Cloud DR Architecture ↗
               </a>
-              <a href="https://github.com/srinivasachivukula/JWK-Vault" target="_blank" class="btn-deliverable repo">
+              <a href="https://github.com/SrinivasaChivukula/JWK-Vault" target="_blank" class="btn-deliverable repo">
                 <i class="fa-solid fa-key"></i> Cryptographic Key Server ↗
               </a>
             </div>
@@ -1017,28 +1013,107 @@
         <div class="chapter-tag">Chapter 03 &bull; Distributed Systems & Software</div>
         <h2 class="chapter-title">Landmark Engineering Systems.</h2>
         <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 700px; margin-bottom: 40px;">
-          Production-grade distributed backends, edge-native microservices, cross-platform applications, and cloud architectures built with verified test suites.
+          Production-grade distributed backends, edge-native microservices, mobile systems, and cloud architectures built with verified test suites.
         </p>
 
         <div class="systems-list">
-          <!-- System 1: sec-rag -->
+          <!-- System 1: GaitVision -->
+          <div class="system-row">
+            <div class="system-info">
+              <h3>GaitVision <em>2025</em></h3>
+              <p class="system-desc">
+                Cross-platform AI gait-analysis mobile application supporting physical therapy and rehabilitation assessment. 
+                Migrated 9,500+ lines of business logic to Kotlin Multiplatform (KMP), enabling 100% logic reuse across Android and iOS. 
+                Secured sensitive patient telemetry with AES-256 encryption and Argon2 hashing, optimizing on-device ML inference by 20%.
+              </p>
+              <div class="story-pills">
+                <span class="tech-tag">Kotlin Multiplatform</span>
+                <span class="tech-tag">TensorFlow Lite</span>
+                <span class="tech-tag">Google ML Kit</span>
+                <span class="tech-tag">AES-256 Encryption</span>
+                <span class="tech-tag">Jetpack Compose</span>
+              </div>
+              <div class="system-actions">
+                <a href="https://github.com/SrinivasaChivukula/GaitVision" target="_blank" class="btn-deliverable repo">
+                  <i class="fa-brands fa-github"></i> Repository & Capstone Docs ↗
+                </a>
+              </div>
+            </div>
+            <div class="system-meta">
+              <div class="system-meta-row">
+                <span class="system-meta-label">Architecture</span>
+                <span class="system-meta-val">Kotlin Multiplatform</span>
+              </div>
+              <div class="system-meta-row">
+                <span class="system-meta-label">KMP Logic Reused</span>
+                <span class="system-meta-val">9,500+ Lines</span>
+              </div>
+              <div class="system-meta-row">
+                <span class="system-meta-label">Inference Speedup</span>
+                <span class="system-meta-val" style="color: var(--accent-emerald);">+20% On-Device</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- System 2: cf_ai_mentor -->
+          <div class="system-row">
+            <div class="system-info">
+              <h3>cf_ai_mentor <em>2025</em></h3>
+              <p class="system-desc">
+                Edge-native AI technical interview coach running entirely on Cloudflare Workers edge runtime. 
+                Streams Llama 3.3 70B responses over Server-Sent Events (SSE), maintains stateful session memory with Durable Objects, 
+                and orchestrates multi-step mock interviews with real-time speech input. Fully tested with Vitest (7/7 tests passing) and deployed live.
+              </p>
+              <div class="story-pills">
+                <span class="tech-tag">Cloudflare Workers AI</span>
+                <span class="tech-tag">Llama 3.3 70B</span>
+                <span class="tech-tag">Durable Objects</span>
+                <span class="tech-tag">React 18</span>
+                <span class="tech-tag">Vitest 7/7</span>
+              </div>
+              <div class="system-actions">
+                <a href="https://cf-ai-mentor.dev" target="_blank" class="btn-deliverable live">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Production Site (cf-ai-mentor.dev) ↗
+                </a>
+                <a href="https://github.com/SrinivasaChivukula/cf_ai_mentor" target="_blank" class="btn-deliverable repo">
+                  <i class="fa-brands fa-github"></i> Repository ↗
+                </a>
+              </div>
+            </div>
+            <div class="system-meta">
+              <div class="system-meta-row">
+                <span class="system-meta-label">Deployment</span>
+                <span class="system-meta-val" style="color: var(--accent-emerald);">cf-ai-mentor.dev</span>
+              </div>
+              <div class="system-meta-row">
+                <span class="system-meta-label">Model Runtime</span>
+                <span class="system-meta-val">Llama 3.3 70B (Edge)</span>
+              </div>
+              <div class="system-meta-row">
+                <span class="system-meta-label">Test Coverage</span>
+                <span class="system-meta-val" style="color: var(--accent-emerald);">7/7 Vitest Passed</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- System 3: sec-rag -->
           <div class="system-row">
             <div class="system-info">
               <h3>sec-rag <em>2026</em></h3>
               <p class="system-desc">
                 High-performance security intelligence Retrieval-Augmented Generation engine built from scratch in Go. 
-                Features sub-millisecond vector indexing, SIMD cosine similarity calculations, and concurrent ingestion pipelines 
-                processing CVE feeds and NIST compliance standards with zero external heavy vector databases.
+                Features sub-millisecond vector indexing, SIMD cosine similarity calculations, and concurrent ingestion worker pools 
+                processing CVE vulnerability feeds and NIST compliance standards with zero heavy external vector databases.
               </p>
               <div class="story-pills">
                 <span class="tech-tag">Go 1.22</span>
-                <span class="tech-tag">Vector Indexing</span>
-                <span class="tech-tag">SIMD Math</span>
+                <span class="tech-tag">Vector Search</span>
+                <span class="tech-tag">SIMD Cosine</span>
                 <span class="tech-tag">CVE Feeds</span>
                 <span class="tech-tag">Benchmarked</span>
               </div>
               <div class="system-actions">
-                <a href="https://github.com/srinivasachivukula/sec-rag" target="_blank" class="btn-deliverable repo">
+                <a href="https://github.com/SrinivasaChivukula/sec-rag" target="_blank" class="btn-deliverable repo">
                   <i class="fa-brands fa-github"></i> Repository & Benchmarks ↗
                 </a>
               </div>
@@ -1059,54 +1134,13 @@
             </div>
           </div>
 
-          <!-- System 2: cf-ai-mentor -->
-          <div class="system-row">
-            <div class="system-info">
-              <h3>cf-ai-mentor <em>2026</em></h3>
-              <p class="system-desc">
-                Edge-native AI technical mentorship platform deployed in production on Cloudflare Workers edge runtime. 
-                Constructed with React 18, persistent relational state via Cloudflare D1 SQLite, and sub-80ms AI inference powered by 
-                Cloudflare Workers AI (Llama-3-8b). Fully tested with Vitest (7/7 tests passing).
-              </p>
-              <div class="story-pills">
-                <span class="tech-tag">Cloudflare Workers</span>
-                <span class="tech-tag">React 18</span>
-                <span class="tech-tag">D1 SQLite</span>
-                <span class="tech-tag">Workers AI (Llama 3)</span>
-                <span class="tech-tag">Vitest 7/7</span>
-              </div>
-              <div class="system-actions">
-                <a href="https://cf-ai-mentor.dev" target="_blank" class="btn-deliverable live">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Production Site (cf-ai-mentor.dev) ↗
-                </a>
-                <a href="https://github.com/srinivasachivukula/cf_ai_mentor" target="_blank" class="btn-deliverable repo">
-                  <i class="fa-brands fa-github"></i> Repository ↗
-                </a>
-              </div>
-            </div>
-            <div class="system-meta">
-              <div class="system-meta-row">
-                <span class="system-meta-label">Deployment</span>
-                <span class="system-meta-val" style="color: var(--accent-emerald);">cf-ai-mentor.dev</span>
-              </div>
-              <div class="system-meta-row">
-                <span class="system-meta-label">Inference Latency</span>
-                <span class="system-meta-val">&lt; 80 ms (Edge)</span>
-              </div>
-              <div class="system-meta-row">
-                <span class="system-meta-label">Database</span>
-                <span class="system-meta-val">Cloudflare D1 SQLite</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- System 3: Dining-App -->
+          <!-- System 4: Dining-App -->
           <div class="system-row">
             <div class="system-info">
               <h3>Dining-App <em>2025</em></h3>
               <p class="system-desc">
-                Cross-platform nutrition tracking and campus dining web application built with React Native and Expo. 
-                Compiled for production with Metro web bundler. Provides dietary filtering, nutritional macronutrient breakdowns, 
+                Cross-platform nutrition tracking and campus dining web application built with React Native and Expo SDK 51. 
+                Compiled for web with Metro bundler. Provides dietary restriction filtering, daily nutritional macronutrient breakdowns, 
                 and real-time cafeteria menus with offline local storage caching.
               </p>
               <div class="story-pills">
@@ -1120,7 +1154,7 @@
                 <a href="https://srinivasachivukula.github.io/Dining-App/" target="_blank" class="btn-deliverable live">
                   <i class="fa-solid fa-mobile-screen"></i> Launch Web App (Expo Build) ↗
                 </a>
-                <a href="https://github.com/srinivasachivukula/Dining-App" target="_blank" class="btn-deliverable repo">
+                <a href="https://github.com/SrinivasaChivukula/Dining-App" target="_blank" class="btn-deliverable repo">
                   <i class="fa-brands fa-github"></i> Repository ↗
                 </a>
               </div>
@@ -1141,7 +1175,7 @@
             </div>
           </div>
 
-          <!-- System 4: AegisCloud -->
+          <!-- System 5: AegisCloud -->
           <div class="system-row">
             <div class="system-info">
               <h3>AegisCloud <em>2025</em></h3>
@@ -1155,10 +1189,10 @@
                 <span class="tech-tag">AWS Multi-Region</span>
                 <span class="tech-tag">Route 53 DNS</span>
                 <span class="tech-tag">Aurora Multi-AZ</span>
-                <span class="tech-tag">35/35 Validated</span>
+                <span class="tech-tag">35 Modules</span>
               </div>
               <div class="system-actions">
-                <a href="https://github.com/srinivasachivukula/AegisCloud" target="_blank" class="btn-deliverable repo">
+                <a href="https://github.com/SrinivasaChivukula/AegisCloud" target="_blank" class="btn-deliverable repo">
                   <i class="fa-brands fa-github"></i> Terraform Architecture ↗
                 </a>
               </div>
@@ -1173,16 +1207,16 @@
                 <span class="system-meta-val">&lt; 60 seconds</span>
               </div>
               <div class="system-meta-row">
-                <span class="system-meta-label">Terraform Modules</span>
+                <span class="system-meta-label">Validation</span>
                 <span class="system-meta-val" style="color: var(--accent-emerald);">35 Configs Passed</span>
               </div>
             </div>
           </div>
 
-          <!-- System 5: JWK-Shield & JWK-Vault -->
+          <!-- System 6: JWK-Shield & JWK-Vault -->
           <div class="system-row">
             <div class="system-info">
-              <h3>JWK-Shield & JWK-Vault <em>2025</em></h3>
+              <h3>JWK-Shield & JWK-Vault <em>2026</em></h3>
               <p class="system-desc">
                 Cryptographic authentication and authorization suite compliant with RFC 7517. Engineered in Python with SQLite persistence, 
                 handling asymmetric RSA-256 key pair generation, dynamic key rotation, rate-limiting, and client JWT token verification. 
@@ -1196,10 +1230,10 @@
                 <span class="tech-tag">Pytest 4/4 Passed</span>
               </div>
               <div class="system-actions">
-                <a href="https://github.com/srinivasachivukula/JWK-Vault" target="_blank" class="btn-deliverable repo">
+                <a href="https://github.com/SrinivasaChivukula/JWK-Vault" target="_blank" class="btn-deliverable repo">
                   <i class="fa-brands fa-github"></i> JWK-Vault Repo ↗
                 </a>
-                <a href="https://github.com/srinivasachivukula/JWK-Shield" target="_blank" class="btn-deliverable repo">
+                <a href="https://github.com/SrinivasaChivukula/JWK-Shield" target="_blank" class="btn-deliverable repo">
                   <i class="fa-brands fa-github"></i> JWK-Shield Repo ↗
                 </a>
               </div>
@@ -1261,10 +1295,10 @@
             <tbody id="archiveTableBody">
               <!-- cf_ai_mentor -->
               <tr data-cat="web ai">
-                <td>2026</td>
+                <td>2025</td>
                 <td class="project-name-cell"><strong>cf_ai_mentor</strong> <span class="badge-kind">Live</span></td>
                 <td>Web & Edge AI</td>
-                <td>Cloudflare Workers, React 18, D1 SQLite, Workers AI</td>
+                <td>Cloudflare Workers, React 18, D1 SQLite, Llama 3.3 70B</td>
                 <td><a href="https://cf-ai-mentor.dev" target="_blank" class="link-live"><i class="fa-solid fa-arrow-up-right-from-square"></i> cf-ai-mentor.dev ↗</a></td>
               </tr>
               <!-- Dining-App -->
@@ -1283,13 +1317,21 @@
                 <td>Vanilla CSS, Glassmorphism, Micro-Interactions</td>
                 <td><a href="https://srinivasachivukula.github.io/Dynamic-Web-Essentials/" target="_blank" class="link-live"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live CSS System ↗</a></td>
               </tr>
+              <!-- GaitVision -->
+              <tr data-cat="ai systems">
+                <td>2025</td>
+                <td class="project-name-cell"><strong>GaitVision</strong></td>
+                <td>Mobile & AI</td>
+                <td>Kotlin Multiplatform, TensorFlow Lite, ML Kit, SQL</td>
+                <td><a href="https://github.com/SrinivasaChivukula/GaitVision" target="_blank" class="link-code"><i class="fa-brands fa-github"></i> Repository ↗</a></td>
+              </tr>
               <!-- sec-rag -->
               <tr data-cat="systems ai">
                 <td>2026</td>
                 <td class="project-name-cell"><strong>sec-rag</strong></td>
                 <td>Systems & AI</td>
                 <td>Go 1.22, Vector Indexing, SIMD Cosine, CVE Feeds</td>
-                <td><a href="https://github.com/srinivasachivukula/sec-rag" target="_blank" class="link-code"><i class="fa-brands fa-github"></i> Repository ↗</a></td>
+                <td><a href="https://github.com/SrinivasaChivukula/sec-rag" target="_blank" class="link-code"><i class="fa-brands fa-github"></i> Repository ↗</a></td>
               </tr>
               <!-- AegisCloud -->
               <tr data-cat="cloud systems">
@@ -1297,7 +1339,7 @@
                 <td class="project-name-cell"><strong>AegisCloud</strong></td>
                 <td>Cloud & Infra</td>
                 <td>AWS Multi-Region, Terraform, Route 53, Aurora Multi-AZ</td>
-                <td><a href="https://github.com/srinivasachivukula/AegisCloud" target="_blank" class="link-code"><i class="fa-brands fa-github"></i> Repository ↗</a></td>
+                <td><a href="https://github.com/SrinivasaChivukula/AegisCloud" target="_blank" class="link-code"><i class="fa-brands fa-github"></i> Repository ↗</a></td>
               </tr>
               <!-- CommerceStream-Azure -->
               <tr data-cat="cloud systems">
@@ -1305,23 +1347,23 @@
                 <td class="project-name-cell"><strong>CommerceStream-Azure</strong></td>
                 <td>Cloud & Data</td>
                 <td>Azure Synapse, Event Hubs, Stream Analytics, SQL DW</td>
-                <td><a href="https://github.com/srinivasachivukula/CommerceStream-Azure" target="_blank" class="link-code"><i class="fa-brands fa-github"></i> Repository ↗</a></td>
+                <td><a href="https://github.com/SrinivasaChivukula/CommerceStream-Azure" target="_blank" class="link-code"><i class="fa-brands fa-github"></i> Repository ↗</a></td>
               </tr>
               <!-- JWK-Vault -->
               <tr data-cat="systems">
-                <td>2025</td>
+                <td>2026</td>
                 <td class="project-name-cell"><strong>JWK-Vault</strong></td>
                 <td>Cryptography</td>
                 <td>Python 3.12, RSA-256 Key Management, RFC 7517</td>
-                <td><a href="https://github.com/srinivasachivukula/JWK-Vault" target="_blank" class="link-code"><i class="fa-brands fa-github"></i> Repository ↗</a></td>
+                <td><a href="https://github.com/SrinivasaChivukula/JWK-Vault" target="_blank" class="link-code"><i class="fa-brands fa-github"></i> Repository ↗</a></td>
               </tr>
               <!-- JWK-Shield -->
               <tr data-cat="systems">
-                <td>2025</td>
+                <td>2026</td>
                 <td class="project-name-cell"><strong>JWK-Shield</strong></td>
                 <td>Security & Auth</td>
                 <td>Python, JWT Token Validation, Rate Limiting, Pytest</td>
-                <td><a href="https://github.com/srinivasachivukula/JWK-Shield" target="_blank" class="link-code"><i class="fa-brands fa-github"></i> Repository ↗</a></td>
+                <td><a href="https://github.com/SrinivasaChivukula/JWK-Shield" target="_blank" class="link-code"><i class="fa-brands fa-github"></i> Repository ↗</a></td>
               </tr>
               <!-- AIML_Portfolio -->
               <tr data-cat="ai">
@@ -1329,7 +1371,7 @@
                 <td class="project-name-cell"><strong>AIML_Portfolio (Genomic Splicing)</strong> <span class="badge-kind">Colab</span></td>
                 <td>Genomic AI</td>
                 <td>PyTorch, 1D-CNN, Bio-Sequence Feature Extraction</td>
-                <td><a href="https://colab.research.google.com/github/srinivasachivukula/AIML_Portfolio/blob/main/Splice_Junction_Gene_Classification/notebooks/splice_junction_classification.ipynb" target="_blank" class="link-colab"><i class="fa-solid fa-play"></i> Run in Colab ↗</a></td>
+                <td><a href="https://colab.research.google.com/github/SrinivasaChivukula/AIML_Portfolio/blob/main/Splice_Junction_Gene_Classification/notebooks/splice_junction_classification.ipynb" target="_blank" class="link-colab"><i class="fa-solid fa-play"></i> Run in Colab ↗</a></td>
               </tr>
               <!-- Predictive-Health-Analytics -->
               <tr data-cat="ai">
@@ -1337,7 +1379,7 @@
                 <td class="project-name-cell"><strong>Predictive-Health-Analytics</strong> <span class="badge-kind">Colab</span></td>
                 <td>Machine Learning</td>
                 <td>XGBoost, Random Forest, SHAP Explanations, Scikit-Learn</td>
-                <td><a href="https://colab.research.google.com/github/srinivasachivukula/Predictive-Health-Analytics/blob/main/Predictive_Health_Analytics.ipynb" target="_blank" class="link-colab"><i class="fa-solid fa-play"></i> Run in Colab ↗</a></td>
+                <td><a href="https://colab.research.google.com/github/SrinivasaChivukula/Predictive-Health-Analytics/blob/main/Predictive_Health_Analytics.ipynb" target="_blank" class="link-colab"><i class="fa-solid fa-play"></i> Run in Colab ↗</a></td>
               </tr>
               <!-- Loan-Risk-Analysis -->
               <tr data-cat="ai">
@@ -1345,7 +1387,7 @@
                 <td class="project-name-cell"><strong>Loan-Risk-Analysis</strong> <span class="badge-kind">Colab</span></td>
                 <td>FinTech & ML</td>
                 <td>Credit Default Modeling, Logistic Regression, ROC-AUC</td>
-                <td><a href="https://colab.research.google.com/github/srinivasachivukula/Loan-Risk-Analysis/blob/main/Loan_Risk_Analysis.ipynb" target="_blank" class="link-colab"><i class="fa-solid fa-play"></i> Run in Colab ↗</a></td>
+                <td><a href="https://colab.research.google.com/github/SrinivasaChivukula/Loan-Risk-Analysis/blob/main/Loan_Risk_Analysis.ipynb" target="_blank" class="link-colab"><i class="fa-solid fa-play"></i> Run in Colab ↗</a></td>
               </tr>
               <!-- Global-Mobility-Analytics -->
               <tr data-cat="ai">
@@ -1353,7 +1395,7 @@
                 <td class="project-name-cell"><strong>Global-Mobility-Analytics</strong> <span class="badge-kind">Colab</span></td>
                 <td>Data Science</td>
                 <td>Pandas, NumPy, Spatial-Temporal Analysis, Seaborn</td>
-                <td><a href="https://colab.research.google.com/github/srinivasachivukula/Global-Mobility-Analytics/blob/main/Global_Mobility_Analytics.ipynb" target="_blank" class="link-colab"><i class="fa-solid fa-play"></i> Run in Colab ↗</a></td>
+                <td><a href="https://colab.research.google.com/github/SrinivasaChivukula/Global-Mobility-Analytics/blob/main/Global_Mobility_Analytics.ipynb" target="_blank" class="link-colab"><i class="fa-solid fa-play"></i> Run in Colab ↗</a></td>
               </tr>
               <!-- Predictive-Sales-Analytics -->
               <tr data-cat="ai">
@@ -1361,7 +1403,7 @@
                 <td class="project-name-cell"><strong>Predictive-Sales-Analytics</strong> <span class="badge-kind">Colab</span></td>
                 <td>Data Science</td>
                 <td>Time Series Forecasting, ARIMA, Prophet, Regression</td>
-                <td><a href="https://colab.research.google.com/github/srinivasachivukula/Predictive-Sales-Analytics/blob/main/Predictive_Sales_Analytics.ipynb" target="_blank" class="link-colab"><i class="fa-solid fa-play"></i> Run in Colab ↗</a></td>
+                <td><a href="https://colab.research.google.com/github/SrinivasaChivukula/Predictive-Sales-Analytics/blob/main/Predictive_Sales_Analytics.ipynb" target="_blank" class="link-colab"><i class="fa-solid fa-play"></i> Run in Colab ↗</a></td>
               </tr>
               <!-- N-Gram-Language-Model -->
               <tr data-cat="ai">
@@ -1369,7 +1411,7 @@
                 <td class="project-name-cell"><strong>N-Gram-Language-Model</strong> <span class="badge-kind">Colab</span></td>
                 <td>NLP</td>
                 <td>Statistical NLP, N-gram Tokenization, Perplexity Scoring</td>
-                <td><a href="https://colab.research.google.com/github/srinivasachivukula/N-Gram-Language-Model/blob/main/N_Gram_Language_Model.ipynb" target="_blank" class="link-colab"><i class="fa-solid fa-play"></i> Run in Colab ↗</a></td>
+                <td><a href="https://colab.research.google.com/github/SrinivasaChivukula/N-Gram-Language-Model/blob/main/N_Gram_Language_Model.ipynb" target="_blank" class="link-colab"><i class="fa-solid fa-play"></i> Run in Colab ↗</a></td>
               </tr>
               <!-- Search-And-Rescue-Planning -->
               <tr data-cat="ai systems">
@@ -1377,7 +1419,7 @@
                 <td class="project-name-cell"><strong>Search-And-Rescue-Planning</strong> <span class="badge-kind">Colab</span></td>
                 <td>Algorithms & AI</td>
                 <td>A* Search, Dijkstra, Heuristic Grid Navigation, Graph Theory</td>
-                <td><a href="https://colab.research.google.com/github/srinivasachivukula/Search-And-Rescue-Planning/blob/main/Search_And_Rescue_Planning.ipynb" target="_blank" class="link-colab"><i class="fa-solid fa-play"></i> Run in Colab ↗</a></td>
+                <td><a href="https://colab.research.google.com/github/SrinivasaChivukula/Search-And-Rescue-Planning/blob/main/Search_And_Rescue_Planning.ipynb" target="_blank" class="link-colab"><i class="fa-solid fa-play"></i> Run in Colab ↗</a></td>
               </tr>
               <!-- Weather-Explorer-MCP -->
               <tr data-cat="systems cloud">
@@ -1385,7 +1427,7 @@
                 <td class="project-name-cell"><strong>Weather-Explorer-MCP</strong></td>
                 <td>AI Tooling</td>
                 <td>Model Context Protocol (MCP), Node.js, Claude Tools</td>
-                <td><a href="https://github.com/srinivasachivukula/Weather-Explorer-MCP" target="_blank" class="link-code"><i class="fa-brands fa-github"></i> Repository ↗</a></td>
+                <td><a href="https://github.com/SrinivasaChivukula/Weather-Explorer-MCP" target="_blank" class="link-code"><i class="fa-brands fa-github"></i> Repository ↗</a></td>
               </tr>
               <!-- Dreamscape-Composer -->
               <tr data-cat="systems">
@@ -1393,15 +1435,7 @@
                 <td class="project-name-cell"><strong>Dreamscape-Composer</strong></td>
                 <td>Creative Audio</td>
                 <td>Python, Algorithmic Sound Synthesis, MIDI Processing</td>
-                <td><a href="https://github.com/srinivasachivukula/Dreamscape-Composer" target="_blank" class="link-code"><i class="fa-brands fa-github"></i> Repository ↗</a></td>
-              </tr>
-              <!-- GaitVision -->
-              <tr data-cat="ai systems">
-                <td>2024</td>
-                <td class="project-name-cell"><strong>GaitVision</strong></td>
-                <td>Computer Vision</td>
-                <td>Android, Kotlin, MediaPipe Pose Estimation, Biomechanics</td>
-                <td><a href="https://github.com/srinivasachivukula/GaitVision" target="_blank" class="link-code"><i class="fa-brands fa-github"></i> Repository ↗</a></td>
+                <td><a href="https://github.com/SrinivasaChivukula/Dreamscape-Composer" target="_blank" class="link-code"><i class="fa-brands fa-github"></i> Repository ↗</a></td>
               </tr>
               <!-- Multi-Platform-Service-Architecture -->
               <tr data-cat="systems">
@@ -1409,7 +1443,7 @@
                 <td class="project-name-cell"><strong>Multi-Platform-Service-Architecture</strong></td>
                 <td>Mobile Systems</td>
                 <td>Android Native, IPC Services, Foreground Daemon, Kotlin</td>
-                <td><a href="https://github.com/srinivasachivukula/Multi-Platform-Service-Architecture" target="_blank" class="link-code"><i class="fa-brands fa-github"></i> Repository ↗</a></td>
+                <td><a href="https://github.com/SrinivasaChivukula/Multi-Platform-Service-Architecture" target="_blank" class="link-code"><i class="fa-brands fa-github"></i> Repository ↗</a></td>
               </tr>
               <!-- Srinivasa-s-Portfolio -->
               <tr data-cat="web">
@@ -1417,7 +1451,7 @@
                 <td class="project-name-cell"><strong>Srinivasa-s-Portfolio</strong></td>
                 <td>Web Engineering</td>
                 <td>Semantic HTML5, Responsive CSS3, GitHub Pages</td>
-                <td><a href="https://github.com/srinivasachivukula/Srinivasa-s-Portfolio" target="_blank" class="link-code"><i class="fa-brands fa-github"></i> Repository ↗</a></td>
+                <td><a href="https://github.com/SrinivasaChivukula/Srinivasa-s-Portfolio" target="_blank" class="link-code"><i class="fa-brands fa-github"></i> Repository ↗</a></td>
               </tr>
               <!-- srinivasachivukula (Profile) -->
               <tr data-cat="systems">
@@ -1425,7 +1459,7 @@
                 <td class="project-name-cell"><strong>srinivasachivukula (GitHub Profile)</strong></td>
                 <td>Developer Brand</td>
                 <td>Markdown, GitHub Actions, Dynamic Status Readme</td>
-                <td><a href="https://github.com/srinivasachivukula/srinivasachivukula" target="_blank" class="link-code"><i class="fa-brands fa-github"></i> Repository ↗</a></td>
+                <td><a href="https://github.com/SrinivasaChivukula/srinivasachivukula" target="_blank" class="link-code"><i class="fa-brands fa-github"></i> Repository ↗</a></td>
               </tr>
             </tbody>
           </table>
@@ -1444,9 +1478,9 @@
             <h3>B.S. in Computer Science</h3>
             <div class="credential-school">University of North Texas &bull; Minor in Mathematics</div>
             <p class="credential-desc">
-              <strong>Cumulative GPA: 4.0 / 4.0</strong> (Dec 2026). Dean's List every semester. 
-              Core coursework in Distributed Systems, Operating Systems, Algorithm Analysis, Data Structures, 
-              Database Systems, Computer Networks, and Cryptography.
+              <strong>Cumulative GPA: 4.0 / 4.0</strong> (Aug 2022 &ndash; Dec 2026). President's List every semester. UNT Excellence Scholarship recipient.
+              Core coursework in Distributed Systems, Operating Systems, Algorithm Analysis, Machine Learning, Database Security, 
+              Cloud Computing, Linear Algebra, and Multivariable Calculus.
             </p>
           </div>
 
@@ -1454,7 +1488,7 @@
             <h3>Honors & Academic Certifications</h3>
             <div class="credential-school">National & Institutional Recognition</div>
             <p class="credential-desc">
-              &bull; <strong>1st Place Winner</strong> &mdash; HackWell 2024 Hackathon<br />
+              &bull; <strong>1st Place Winner</strong> &mdash; HackWell 2024 Hackathon (Biometric Monitoring AI)<br />
               &bull; <strong>NSA / DHS CAE-CD</strong> Cyber Defense Certificate<br />
               &bull; <strong>AI & Machine Learning</strong> Academic Certificate<br />
               &bull; <strong>UR2PHD Fellow</strong> &mdash; Computing Research Association
@@ -1477,19 +1511,19 @@
         <div>
           <button class="email-copy-pill" onclick="copyEmail()">
             <i class="fa-regular fa-envelope"></i>
-            <span id="emailText">srinivasachivukula1@gmail.com</span>
+            <span id="emailText">srinivasachivukula@outlook.com</span>
             <i class="fa-regular fa-copy" id="copyIcon" style="color: var(--text-muted);"></i>
           </button>
         </div>
 
         <div class="social-row">
-          <a href="mailto:srinivasachivukula1@gmail.com" class="social-link">
+          <a href="mailto:srinivasachivukula@outlook.com" class="social-link">
             <i class="fa-solid fa-paper-plane"></i> Email
           </a>
-          <a href="https://linkedin.com/in/srinivasa-chivukula" target="_blank" rel="noopener noreferrer" class="social-link">
+          <a href="https://linkedin.com/in/srinivasasaidattac" target="_blank" rel="noopener noreferrer" class="social-link">
             <i class="fa-brands fa-linkedin"></i> LinkedIn
           </a>
-          <a href="https://github.com/srinivasachivukula" target="_blank" rel="noopener noreferrer" class="social-link">
+          <a href="https://github.com/SrinivasaChivukula" target="_blank" rel="noopener noreferrer" class="social-link">
             <i class="fa-brands fa-github"></i> GitHub
           </a>
           <a href="Srinivasa_Chivukula_Resume.pdf" target="_blank" class="social-link">
@@ -1508,7 +1542,7 @@
 
   <script>
     function copyEmail() {
-      const email = 'srinivasachivukula1@gmail.com';
+      const email = 'srinivasachivukula@outlook.com';
       navigator.clipboard.writeText(email).then(() => {
         const text = document.getElementById('emailText');
         const icon = document.getElementById('copyIcon');
