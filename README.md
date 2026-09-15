@@ -17,7 +17,7 @@ Real running applications deployed to production cloud infrastructure or compile
 
 | Project | Tech Stack | Verified Live Production Link | Repository | Verification & Tests |
 |:---|:---|:---:|:---:|:---:|
-| **cf-ai-mentor** | React 18, Cloudflare Workers, D1 SQLite, Workers AI | [**cf-ai-mentor.dev**](https://cf-ai-mentor.dev) | [cf_ai_mentor](https://github.com/SrinivasaChivukula/cf_ai_mentor) | 7/7 Vitest pool-workers tests pass |
+| **cf-ai-mentor** | React 18, Cloudflare Workers, D1 SQLite, Workers AI | [**Live Demo**](https://srinivasachivukula.github.io/cf_ai_mentor/) | [cf_ai_mentor](https://github.com/SrinivasaChivukula/cf_ai_mentor) | 15/15 Vitest pool-workers tests pass |
 | **UNT Dining Planner** | React Native, Expo SDK 51, TypeScript, Firebase | [**Live Expo App**](https://srinivasachivukula.github.io/Dining-App/) | [Dining-App](https://github.com/SrinivasaChivukula/Dining-App) | Compiled React Native Web bundle |
 | **Dynamic-Web-Essentials** | Vanilla HTML5/CSS3, Glassmorphism, Micro-Animations | [**Live Showcase**](https://srinivasachivukula.github.io/Dynamic-Web-Essentials/) | [Dynamic-Web-Essentials](https://github.com/SrinivasaChivukula/Dynamic-Web-Essentials) | Zero-dependency 60 FPS responsive UI |
 
